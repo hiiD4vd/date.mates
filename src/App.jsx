@@ -1,10 +1,9 @@
 import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import DecorationSet from './components/DecorationSet';
+import HowItWorks from './components/HowItWorks';
 import ProductCatalog from './components/ProductCatalog';
 import Testimonials from './components/Testimonials';
-import Blog from './components/Blog';
 import LocationFooter from './components/LocationFooter';
 import FAB from './components/FAB';
 
@@ -13,10 +12,9 @@ function App() {
     <div className="min-h-screen bg-white">
       <Header />
       <Hero />
-      <DecorationSet />
+      <HowItWorks />
       <ProductCatalog />
       <Testimonials />
-      <Blog />
       <LocationFooter />
       <FAB />
     </div>
