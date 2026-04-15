@@ -1,15 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Pinyon+Script&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap');
 @import "tailwindcss";
 
 @theme {
   --color-peach: #FECDD3;
   --color-darkgrey: #333333;
   --color-offwhite: #FAFAFA;
+  --color-primary: #242A21;
+  --color-bgLight: #FFFFFF;
+  --color-accentPink: #F18C99;
+  --color-accentYellow: #E8A741;
+  --color-accentGreen: #5A6F4C;
+  --color-textGray: #545454;
   --font-serif: "Playfair Display", serif;
   --font-sans: "Inter", sans-serif;
+  --font-swash: "Pinyon Script", cursive;
 }
 
 @layer base {
+  :root {
+    /* Konfigurasi untuk huruf judul (Drop Cap) */
+    --drop-cap-size: 1.8em;       /* Ukuran font huruf awal */
+    --drop-cap-spacing: 1.5rem; /* pr-2.5 (Jarak ke huruf sebelahnya) */
+    --drop-cap-top: 0.45rem;      /* top-2 (Posisi geser atas-bawah) */
+  }
+
   body {
     background-color: white;
     color: var(--color-darkgrey);
@@ -25,5 +39,13 @@
 @layer utilities {
   .smooth-scroll {
     scroll-behavior: smooth;
+  }
+  
+  .drop-cap {
+    font-family: var(--font-swash);
+    font-size: var(--drop-cap-size);
+    padding-right: var(--drop-cap-spacing);
+    position: relative;
+    top: var(--drop-cap-top);
   }
 }

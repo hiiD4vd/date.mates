@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fieldtime - A Day of Sound, Sun, and Slow Living</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Pinyon+Script&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
@@ -21,6 +21,7 @@
                     fontFamily: {
                         serif: ['Playfair Display', 'serif'],
                         sans: ['Inter', 'sans-serif'],
+                        swash: ['Pinyon Script', 'cursive'],
                     }
                 }
             }
@@ -53,24 +54,25 @@
         <div class="flex justify-between items-start mb-6">
             <div class="flex gap-3 pt-6">
                 <a href="#" class="px-5 py-2 border border-gray-300 rounded-full text-[10px] font-bold tracking-widest uppercase flex items-center gap-2 hover:bg-gray-50">
-                    Join Now <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    Join Picnic <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
                 </a>
                 <a href="#" class="px-5 py-2 bg-primary text-white rounded-full text-[10px] font-bold tracking-widest uppercase flex items-center gap-2 hover:opacity-90">
-                    Experience Next <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    Upcoming Event <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                 </a>
             </div>
             <h1 class="text-right text-6xl md:text-7xl lg:text-[5.5rem] leading-[1.1] text-primary">
-                <span class="font-serif italic">A day of Sound, Sun,</span><br>
-                <span class="font-serif">and Slow Living</span>
+                <span class="font-serif italic"><span class="font-swash text-[1.4em] pr-1 relative top-2">A</span> day of Sound, Sun,</span><br>
+                <span class="font-serif italic">and Slow Living</span>
             </h1>
         </div>
 
         <div class="relative w-full h-[550px] bg-gray-200 rounded-[2.5rem] overflow-hidden">
             <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=1600&q=80" alt="Aesthetic landscape" class="absolute inset-0 w-full h-full object-cover">
             
-            <div class="absolute top-1/4 left-[30%] text-white text-sm font-light max-w-[200px] leading-relaxed drop-shadow-lg z-10">
-                It's a place that let<br>you slowly release.<br><br>
-                A moment of sound, form,<br>and pure bliss.
+            <div class="absolute top-1/4 left-[30%] text-white text-sm font-light max-w-[250px] leading-relaxed drop-shadow-lg z-10">
+                This is more than an<br>event — it's Fieldtime.<br><br>
+                <span class="ml-8">A moment to pause, listen,</span><br>
+                <span class="ml-8">and simply be.</span>
             </div>
 
             <div class="absolute bottom-10 right-10 flex gap-4 items-end z-10">
@@ -82,8 +84,8 @@
                                 <img src="https://images.unsplash.com/photo-1518609878373-06d740f60d8b?auto=format&fit=crop&w=100&q=80" class="w-full h-full object-cover">
                             </div>
                             <div>
-                                <h4 class="text-sm font-semibold drop-shadow-md">Anning</h4>
-                                <p class="text-[10px] opacity-90 drop-shadow-md">Slow Living - EP</p>
+                                <h4 class="text-sm font-semibold drop-shadow-md">Raining</h4>
+                                <p class="text-[10px] opacity-90 drop-shadow-md">Jeon Jin Hee</p>
                             </div>
                         </div>
                         <div class="w-full bg-white/40 h-1.5 rounded-full mb-4">
@@ -107,17 +109,17 @@
     <section class="max-w-[1400px] mx-auto px-8 py-12">
         <div class="flex justify-between items-end mb-12">
             <h2 class="text-5xl md:text-6xl text-primary leading-tight">
-                <span class="font-serif italic">Where Moments Grow</span> <br>
-                <span class="font-serif">in the Open Air</span>
+                <span class="font-serif italic"><span class="font-swash text-[1.4em] pr-1 relative top-2">W</span>here Moments Grow</span> <br>
+                <span class="font-serif italic">in the <span class="font-swash text-[1.4em] pr-1 relative top-2">O</span>pen Air</span>
             </h2>
-            <div class="max-w-sm text-right">
+            <div class="max-w-sm text-left">
                 <p class="text-[13px] text-textGray mb-6 leading-relaxed">
-                    Nothing is a space empty from the noise to unroll<br>
-                    things to enjoy in the background. crafted aroma oils,<br>
-                    and people gathering around spring grass.
+                    Fieldtime is a space to slow down and enjoy the simple<br>
+                    things — music in the background, sunlight on your skin,<br>
+                    and people gathering on warm spring grass.
                 </p>
                 <a href="#" class="inline-flex items-center gap-2 px-6 py-2.5 bg-primary text-white rounded-full text-[10px] font-bold tracking-widest uppercase hover:opacity-90">
-                    Read The Manifesto Here <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    See Whats Behind The Scene <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                 </a>
             </div>
         </div>
