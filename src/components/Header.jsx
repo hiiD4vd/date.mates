@@ -15,13 +15,17 @@ const Header = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/80 backdrop-blur-lg border-b border-gray-100 shadow-sm py-4' : 'bg-transparent py-6'}`}
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-offwhite/90 backdrop-blur-lg border-b border-amber-100 shadow-[0_4px_20px_rgba(139,69,19,0.05)] py-4' : 'bg-transparent py-6'}`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-3 items-center">
         {/* Left: Logo */}
         <div className="flex justify-start">
-          <a href="#" className={`font-serif text-2xl font-bold transition-colors ${scrolled ? 'text-darkgrey' : 'text-white drop-shadow-sm'}`}>
-            date<span className="text-rose-300 mx-0.5 mt-2">.</span>mates
+          <a href="#" className="flex items-center">
+            <img 
+              src="/assets/logo/datemates logo transparent.png" 
+              alt="date.mates logo" 
+              className={`h-8 md:h-10 object-contain transition-all duration-300 ${scrolled ? 'opacity-100' : 'brightness-0 invert opacity-90 drop-shadow-md'}`} 
+            />
           </a>
         </div>
 
@@ -37,7 +41,7 @@ const Header = () => {
         {/* Right: CTA */}
         <div className="flex justify-end items-center">
           <a href="#" className={`hidden md:inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold rounded-full border transition-all ${
-            scrolled ? 'border-darkgrey text-darkgrey hover:bg-darkgrey hover:text-white' : 'border-white text-white hover:bg-white hover:text-darkgrey'
+            scrolled ? 'border-darkgrey text-darkgrey hover:bg-peach hover:border-peach hover:text-white' : 'border-white text-white hover:bg-white hover:text-darkgrey'
           }`}>
             Collaborate
           </a>

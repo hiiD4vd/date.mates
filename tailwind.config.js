@@ -6,9 +6,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        peach: '#F5B7B1',
-        darkgrey: '#333333',
-        offwhite: '#FDFBF7'
+        peach: '#F2A68D',
+        darkgrey: '#4A3B32',
+        offwhite: '#FFFBF7',
+        terracotta: '#E8A598',
       },
       fontFamily: {
         serif: ['"Playfair Display"', 'serif'],

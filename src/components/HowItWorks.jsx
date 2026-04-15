@@ -45,7 +45,7 @@ const HowItWorks = () => {
               transition={{ duration: 0.6, delay: index * 0.2 }}
               className="flex flex-col items-center text-center px-4"
             >
-              <div className="w-16 h-16 rounded-full bg-peach/20 flex items-center justify-center text-[#E18C99] mb-6 border border-peach/30">
+              <div className="w-16 h-16 rounded-full bg-peach/20 flex items-center justify-center text-terracotta mb-6 border border-peach/30">
                 {step.icon}
               </div>
               <h3 className="text-xl font-bold font-sans text-darkgrey mb-3">{step.title}</h3>

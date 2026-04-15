@@ -1,9 +1,9 @@
 import React from 'react';
 
 const testimonials = [
-  { id: 1, name: 'Sarah & James', text: 'Absolutely breathtaking! They transformed the park into our own magical world. The aesthetic was everything we dreamed of.', rating: 5, avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80' },
-  { id: 2, name: 'Nadia F.', text: 'The attention to detail is unmatched. Everything from the cutlery to the ambient lighting was thoughtfully curated.', rating: 5, avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80' },
-  { id: 3, name: 'Michael T.', text: 'A seamless experience. I just booked it, and they handled everything. Best anniversary surprise I could have given.', rating: 5, avatar: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=150&q=80' }
+  { id: 1, name: 'Sarah & James', text: 'Absolutely breathtaking! They transformed the park into our own magical world. The aesthetic was everything we dreamed of.', rating: 5, avatar: '/assets/images/4909310C-7E40-4B4B-9C58-479CDAD286EB - annisa nanda.jpeg' },
+  { id: 2, name: 'Nadia F.', text: 'The attention to detail is unmatched. Everything from the cutlery to the ambient lighting was thoughtfully curated.', rating: 5, avatar: '/assets/images/50A6778C-4A33-4B1F-9F2A-B527FB46B680 - annisa nanda.jpeg' },
+  { id: 3, name: 'Michael T.', text: 'A seamless experience. I just booked it, and they handled everything. Best anniversary surprise I could have given.', rating: 5, avatar: '/assets/images/1F42A6DD-11EA-4256-8D99-C57D0DC2F04B.jpg' }
 ];
 
 const Testimonials = () => {
@@ -16,7 +16,7 @@ const Testimonials = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((t) => (
-            <div key={t.id} className="bg-white p-8 rounded shadow-sm border border-gray-100 flex flex-col justify-between hover:shadow-md transition-shadow">
+            <div key={t.id} className="bg-white p-8 rounded shadow-[0_4px_20px_rgba(139,69,19,0.05)] border border-orange-50 flex flex-col justify-between hover:shadow-[0_8px_30px_rgba(139,69,19,0.1)] transition-shadow">
               <div>
                 <div className="flex text-amber-400 mb-6">
                   {[...Array(t.rating)].map((_, i) => (
