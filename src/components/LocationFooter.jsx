@@ -42,7 +42,7 @@ const LocationFooter = () => {
         >
             <div className="lg:col-span-5">
                 <div className="mb-10">
-                   <img src="/assets/logo/datemates logo transparent.png" alt="date.mates logo" className="h-10 object-contain p-2 bg-primary rounded" />
+                   <img src="/assets/logo/datemates logo transparent.png" alt="date.mates logo" className="h-[4.5rem] object-contain p-2 bg-primary rounded-xl" />
                 </div>
                 <h4 className="font-serif text-2xl italic mb-3 text-primary">Look outside for your date</h4>
                 <p className="text-[12px] text-textGray mb-8 w-3/4 leading-relaxed font-medium">

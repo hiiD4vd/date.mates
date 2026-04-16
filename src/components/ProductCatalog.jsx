@@ -150,7 +150,12 @@ const ProductCatalog = () => {
                 className="aspect-square bg-gray-200 rounded-[2.5rem] overflow-hidden relative group cursor-pointer shadow-sm hover:shadow-xl transition-all duration-300" 
                 onClick={() => setSelectedProduct(product)}
             >
-                <img src={product.image} alt={product.title.replace('<br/>', ' ')} className="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-105" />
+                <img 
+                    src={product.image} 
+                    alt={product.title.replace('<br/>', ' ')} 
+                    loading="lazy"
+                    className="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-105" 
+                />
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition duration-300"></div>
             
                 <div className="absolute top-8 left-8 right-8 flex justify-between items-start z-10 pointer-events-none">

@@ -34,7 +34,7 @@ const Testimonials = () => {
                 transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
                 className="md:col-span-7 bg-gray-200 rounded-[2.5rem] overflow-hidden relative h-[400px] md:h-full group"
             >
-                <img src="/assets/images/1e8e2f2d-fdd6-4588-b0a5-ad6ec83053ea.JPG" alt="Festival moments" className="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-105" />
+                <img src="/assets/images/1e8e2f2d-fdd6-4588-b0a5-ad6ec83053ea.JPG" alt="Festival moments" loading="lazy" className="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-105" />
                 
                 <motion.div 
                     animate={{ y: [0, -8, 0] }}
@@ -107,7 +107,7 @@ const Testimonials = () => {
                     transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.5 }}
                     className="col-span-1 md:col-span-1 md:row-span-1 bg-gray-200 rounded-[2.5rem] overflow-hidden relative h-[250px] md:h-full group"
                 >
-                    <img src="/assets/images/228f6c06-96f6-4cfc-b9d3-f2d5eb85da9e.JPG" alt="Picnic basket" className="absolute inset-0 w-full h-full object-cover transition duration-500 group-hover:scale-105" />
+                    <img src="/assets/images/228f6c06-96f6-4cfc-b9d3-f2d5eb85da9e.JPG" alt="Picnic basket" loading="lazy" className="absolute inset-0 w-full h-full object-cover transition duration-500 group-hover:scale-105" />
                     <motion.div 
                         animate={{ y: [0, -6, 0] }}
                         transition={{ repeat: Infinity, duration: 3.5, ease: "easeInOut", delay: 1 }}

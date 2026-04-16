@@ -90,7 +90,7 @@ Is this available?`;
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 20 }}
           transition={{ duration: 0.3 }}
-          className="relative bg-white w-full max-w-5xl max-h-[90vh] overflow-y-auto overflow-x-hidden flex flex-col md:flex-row shadow-[0_4px_30px_rgba(139,69,19,0.15)] rounded-none"
+          className="relative bg-white w-full max-w-5xl max-h-[90vh] overflow-y-auto overflow-x-hidden flex flex-col md:flex-row shadow-[0_15px_40px_rgba(139,69,19,0.2)] rounded-[2.5rem] md:rounded-[3rem]"
         >
           {/* Close button */}
           <button 
@@ -101,10 +101,13 @@ Is this available?`;
           </button>
 
           {/* Left: Product Details */}
-          <div className="w-full md:w-[45%] bg-offwhite p-8 md:p-12 flex flex-col items-center text-center">
-            <h3 className="font-serif text-3xl md:text-4xl text-darkgrey mb-6">{product.title}</h3>
-            <div className="w-full aspect-[4/3] overflow-hidden bg-gray-200 mb-8 rounded-none shadow-inner">
-               <img src={product.image} alt={product.title} className="w-full h-full object-cover" />
+          <div className="w-full md:w-[45%] bg-[#FDFBF7] p-8 md:p-12 flex flex-col items-center text-center">
+            <h3 
+               className="font-serif text-3xl md:text-4xl text-primary font-medium italic mb-6"
+               dangerouslySetInnerHTML={{ __html: product.title }}
+            />
+            <div className="w-full aspect-[4/3] overflow-hidden bg-gray-200 mb-8 rounded-[2rem] shadow-inner group">
+               <img src={product.image} alt={product.title.replace('<br/>', ' ')} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
             </div>
             <p className="text-gray-500 font-sans leading-relaxed text-sm">
                Experience a breathtaking date setup curated perfectly for you. Our {product.title.toLowerCase()} provides the ultimate aesthetic environment for making memories.
@@ -124,7 +127,7 @@ Is this available?`;
                       type="date" 
                       value={date}
                       onChange={(e) => setDate(e.target.value)}
-                      className="w-full border border-gray-200 bg-offwhite rounded-none px-4 py-3 text-darkgrey focus:outline-none focus:border-peach focus:ring-1 focus:ring-peach transition-colors"
+                      className="w-full border border-gray-200 bg-[#FDFBF7] rounded-xl px-4 py-3 text-primary focus:outline-none focus:border-accentPink focus:ring-1 focus:ring-accentPink transition-colors"
                     />
                  </div>
                  <div>
@@ -132,7 +135,7 @@ Is this available?`;
                     <select 
                        value={time}
                        onChange={(e) => setTime(e.target.value)}
-                       className="w-full border border-gray-200 bg-offwhite rounded-none px-4 py-3 text-darkgrey focus:outline-none focus:border-peach focus:ring-1 focus:ring-peach transition-colors"
+                       className="w-full border border-gray-200 bg-[#FDFBF7] rounded-xl px-4 py-3 text-primary focus:outline-none focus:border-accentPink focus:ring-1 focus:ring-accentPink transition-colors"
                     >
                        <option value="" disabled>Choose time</option>
                        {TIME_SLOTS.map(t => <option key={t} value={t}>{t}</option>)}
@@ -145,13 +148,13 @@ Is this available?`;
                  <label className="block text-xs font-bold text-gray-500 uppercase tracking-widest mb-4">Enhance with Add-ons</label>
                  <div className="space-y-3">
                     {ADD_ONS.map(addon => (
-                       <label key={addon.id} className="flex items-center justify-between p-4 border border-orange-100 rounded-none cursor-pointer hover:border-peach hover:bg-peach/10 transition-colors">
+                       <label key={addon.id} className="flex items-center justify-between p-4 border border-gray-200 rounded-2xl cursor-pointer hover:border-accentPink hover:bg-accentPink/5 transition-all duration-300">
                           <div className="flex items-center">
                              <input 
                                type="checkbox" 
                                checked={!!selectedAddOns.find(a => a.id === addon.id)}
                                onChange={() => toggleAddOn(addon)}
-                               className="w-5 h-5 rounded-none border-gray-300 text-peach focus:ring-peach accent-peach"
+                               className="w-5 h-5 rounded-md border-gray-300 text-accentPink focus:ring-accentPink accent-accentPink"
                              />
                              <span className="ml-3 text-darkgrey font-medium">{addon.name}</span>
                           </div>
@@ -173,7 +176,7 @@ Is this available?`;
                
                <button 
                  onClick={handleWhatsAppCheckout}
-                 className="w-full flex items-center justify-center bg-[#25D366] text-white font-bold py-4 rounded-none shadow-md hover:bg-[#1EBE5A] hover:shadow-[0_4px_15px_rgba(37,211,102,0.3)] transition-all duration-300 transform hover:-translate-y-1"
+                 className="w-full flex items-center justify-center bg-[#25D366] text-white font-bold py-4 rounded-full shadow-md hover:bg-[#1EBE5A] hover:shadow-[0_4px_20px_rgba(37,211,102,0.4)] transition-all duration-300 transform hover:-translate-y-1"
                >
                   <svg className="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />

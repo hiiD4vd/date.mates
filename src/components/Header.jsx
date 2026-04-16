@@ -24,7 +24,7 @@ const Header = () => {
             <img 
               src="/assets/logo/datemates logo transparent.png" 
               alt="date.mates logo" 
-              className="h-10 md:h-12 object-contain" 
+              className="h-16 md:h-20 object-contain drop-shadow-sm" 
             />
           </a>
         </div>
