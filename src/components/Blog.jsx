@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const articles = [
   {
@@ -30,7 +31,13 @@ const articles = [
 const Blog = () => {
   return (
     <section className="max-w-[1400px] mx-auto px-8 py-20" id="dateideas">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-12 border-b border-gray-200 pb-8">
+        <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            className="flex flex-col md:flex-row justify-between items-end mb-12 border-b border-gray-200 pb-8"
+        >
             <div>
                 <h2 className="text-5xl md:text-6xl text-primary leading-tight">
                     <span className="font-serif italic"><span className="drop-cap">D</span>ate Ideas</span> <br/>
@@ -40,11 +47,18 @@ const Blog = () => {
             <a href="#" className="hidden md:inline-flex items-center gap-2 px-6 py-2.5 border border-gray-300 rounded-full text-[10px] font-bold tracking-widest uppercase hover:bg-gray-50 transition">
                 Read All Entries
             </a>
-        </div>
+        </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {articles.map((article) => (
-                <div key={article.id} className="group cursor-pointer">
+            {articles.map((article, index) => (
+                <motion.div 
+                    key={article.id} 
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: index * 0.15 }}
+                    className="group cursor-pointer"
+                >
                     <div className="w-full h-[280px] bg-gray-100 rounded-[2rem] overflow-hidden mb-6 relative">
                         <img 
                             src={article.image} 
@@ -69,7 +83,7 @@ const Blog = () => {
                             Read Article
                         </span>
                     </div>
-                </div>
+                </motion.div>
             ))}
         </div>
         

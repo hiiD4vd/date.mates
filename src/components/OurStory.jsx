@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const OurStory = () => {
   return (
@@ -6,7 +7,13 @@ const OurStory = () => {
       <div className="max-w-[1400px] mx-auto px-8 flex flex-col lg:flex-row gap-16 items-center">
         
         {/* Left: Image / Visual */}
-        <div className="w-full lg:w-5/12 relative group h-[500px]">
+        <motion.div 
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+            className="w-full lg:w-5/12 relative group h-[500px]"
+        >
             <img 
                 src="/assets/images/IMG_1029_jpg.jpg" 
                 alt="date.mates early days" 
@@ -17,10 +24,16 @@ const OurStory = () => {
             <div className="absolute top-8 -right-4 w-24 h-24 bg-accentPink rounded-full flex items-center justify-center rotate-12 shadow-md hover:rotate-0 transition duration-500">
                 <span className="font-swash text-white text-2xl drop-shadow-sm">Since '20</span>
             </div>
-        </div>
+        </motion.div>
 
         {/* Right: Text Content */}
-        <div className="w-full lg:w-7/12">
+        <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
+            className="w-full lg:w-7/12"
+        >
             <h2 className="text-4xl md:text-5xl text-primary leading-tight mb-8">
                 <span className="font-serif italic"><span className="drop-cap">C</span>reate your dream dates</span> <br/>
                 <span className="font-serif italic">come true!</span>
@@ -49,7 +62,7 @@ const OurStory = () => {
                     </li>
                 </ul>
             </div>
-        </div>
+        </motion.div>
 
       </div>
     </section>

@@ -32,10 +32,17 @@ const Header = () => {
         {/* Center: Navigation */}
         <div className="hidden lg:flex items-center gap-10 text-[13px] font-medium text-textGray">
           {['Our Packages', 'How It Works', 'Date Ideas', 'Gallery'].map((item, idx) => (
-            <a key={item} href={`#${item.replace(/\s+/g, '').toLowerCase()}`} className="relative group transition-colors duration-300 hover:text-primary">
+            <motion.a 
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 + (idx * 0.1) }}
+              key={item} 
+              href={`#${item.replace(/\s+/g, '').toLowerCase()}`} 
+              className="relative group transition-colors duration-300 hover:text-primary"
+            >
               {item}
               <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-primary transition-all duration-300 group-hover:w-full"></span>
-            </a>
+            </motion.a>
           ))}
         </div>
 

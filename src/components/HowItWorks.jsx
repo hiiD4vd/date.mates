@@ -1,9 +1,16 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const HowItWorks = () => {
   return (
     <section className="max-w-[1400px] mx-auto px-8 py-12" id="about">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-8">
+        <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-8"
+        >
             <h2 className="text-5xl md:text-6xl text-primary leading-tight">
                 <span className="font-serif italic"><span className="drop-cap">P</span>icnic Moments</span> <br/>
                 <span className="font-serif italic">in the Open Air</span>
@@ -18,10 +25,16 @@ const HowItWorks = () => {
                     See Our Packages <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                 </a>
             </div>
-        </div>
+        </motion.div>
 
         <div className="flex flex-col md:flex-row gap-6 h-auto md:h-[400px]">
-            <div className="w-full md:w-2/3 h-[300px] md:h-full bg-gray-200 rounded-[2.5rem] overflow-hidden relative group">
+            <motion.div 
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
+                className="w-full md:w-2/3 h-[300px] md:h-full bg-gray-200 rounded-[2.5rem] overflow-hidden relative group"
+            >
                 <img src="/assets/images/IMG_1053_jpg.jpg" alt="Picnic setup flatlay" className="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-105" />
                 <div className="absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/20 transition duration-500">
                     <span className="text-white font-bold tracking-widest text-2xl drop-shadow-lg flex items-center gap-2">
@@ -29,26 +42,44 @@ const HowItWorks = () => {
                         date.mates
                     </span>
                 </div>
-            </div>
-            <div className="w-full md:w-1/3 h-[300px] md:h-full bg-accentPink rounded-[2.5rem] p-10 flex flex-col justify-between text-white relative overflow-hidden transition hover:shadow-lg">
+            </motion.div>
+            <motion.div 
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
+                className="w-full md:w-1/3 h-[300px] md:h-full bg-accentPink rounded-[2.5rem] p-10 flex flex-col justify-between text-white relative overflow-hidden transition hover:shadow-lg"
+            >
                 <div className="absolute -right-10 -bottom-10 w-64 h-64 border-[40px] border-white/10 rounded-full pointer-events-none"></div>
                 <div className="text-[80px] font-serif leading-none mt-4 opacity-80 drop-shadow-sm font-semibold">“</div>
                 <h3 className="font-serif text-3xl md:text-4xl italic leading-[1.1] mb-2 md:mb-6 relative z-10 pr-4 md:pr-8 drop-shadow-md">
                     Because the best stage is the earth itself
                 </h3>
-            </div>
+            </motion.div>
         </div>
         <div className="mt-24 border-t border-gray-200 pt-20">
-            <h3 className="text-center font-serif text-3xl md:text-5xl text-primary italic mb-16">
+            <motion.h3 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                className="text-center font-serif text-3xl md:text-5xl text-primary italic mb-16"
+            >
                 <span className="drop-cap">H</span>ow It Works
-            </h3>
+            </motion.h3>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
                 {/* Connecting Line for Desktop */}
                 <div className="hidden md:block absolute top-[28px] left-[15%] right-[15%] h-[1px] bg-gray-200 z-0"></div>
                 
                 {/* Step 1 */}
-                <div className="relative z-10 flex flex-col items-center text-center">
+                <motion.div 
+                    initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                    whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
+                    className="relative z-10 flex flex-col items-center text-center"
+                >
                     <div className="w-16 h-16 rounded-full bg-white border border-gray-200 flex items-center justify-center mb-6 shadow-sm">
                         <span className="font-swash text-3xl text-primary mt-2">1</span>
                     </div>
@@ -56,10 +87,16 @@ const HowItWorks = () => {
                     <p className="text-[12px] text-textGray leading-relaxed max-w-[250px]">
                         Select from our curated catalog packages or request a fully custom intimate setup.
                     </p>
-                </div>
+                </motion.div>
                 
                 {/* Step 2 */}
-                <div className="relative z-10 flex flex-col items-center text-center">
+                <motion.div 
+                    initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                    whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
+                    className="relative z-10 flex flex-col items-center text-center"
+                >
                     <div className="w-16 h-16 rounded-full bg-white border border-gray-200 flex items-center justify-center mb-6 shadow-sm">
                         <span className="font-swash text-3xl text-primary mt-2">2</span>
                     </div>
@@ -67,10 +104,16 @@ const HowItWorks = () => {
                     <p className="text-[12px] text-textGray leading-relaxed max-w-[250px]">
                         Collaborate with our team to lock in the perfect outdoor location and time.
                     </p>
-                </div>
+                </motion.div>
                 
                 {/* Step 3 */}
-                <div className="relative z-10 flex flex-col items-center text-center">
+                <motion.div 
+                    initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                    whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
+                    className="relative z-10 flex flex-col items-center text-center"
+                >
                     <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center mb-6 shadow-md text-white">
                         <span className="font-swash text-3xl mt-2">3</span>
                     </div>
@@ -78,7 +121,7 @@ const HowItWorks = () => {
                     <p className="text-[12px] text-textGray leading-relaxed max-w-[250px]">
                         Show up to your beautiful, ready-made stage. We handle the setup, styling, and cleanup.
                     </p>
-                </div>
+                </motion.div>
             </div>
         </div>
     </section>
