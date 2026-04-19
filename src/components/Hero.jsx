@@ -11,10 +11,10 @@ const Hero = () => {
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className="flex gap-3 md:pb-3"
             >
-                <a href="#packages" className="px-5 py-2 border border-gray-300 rounded-full text-[10px] font-bold tracking-widest uppercase flex items-center gap-2 hover:bg-gray-50 transition hover:scale-105">
+                <a href="#packages" className="px-5 py-2 border border-gray-300 rounded-full text-[10px] font-bold tracking-widest uppercase flex items-center gap-2 hover:bg-cream transition hover:scale-105">
                     Book Picnic <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
                 </a>
-                <a href="#contact" className="px-5 py-2 bg-primary text-white rounded-full text-[10px] font-bold tracking-widest uppercase flex items-center gap-2 hover:opacity-90 transition hover:scale-105 shadow-md">
+                <a href="#contact" className="px-5 py-2 bg-sage text-white rounded-full text-[10px] font-bold tracking-widest uppercase flex items-center gap-2 hover:opacity-90 transition hover:scale-105 shadow-md">
                     Custom Request <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                 </a>
             </motion.div>
@@ -24,11 +24,11 @@ const Hero = () => {
                 transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
                 className="flex flex-col items-start md:items-end"
             >
-                <h1 className="text-left md:text-right text-5xl md:text-6xl lg:text-[5.5rem] leading-[1.1] text-primary mb-5">
-                    <span className="font-serif italic"><span className="drop-cap">A</span>day of Sound, Sun,</span><br/>
-                    <span className="font-serif italic">and Slow Living</span>
+                <h1 className="text-left md:text-right text-5xl md:text-6xl lg:text-[5.5rem] leading-[1.1] text-forest mb-5">
+                    <span className="font-serif italic"><span className="drop-cap">Y</span>our Moment,</span><br/>
+                    <span className="font-serif italic">Made Effortless</span>
                 </h1>
-                <p className="text-[11px] md:text-[13px] text-textGray max-w-[320px] text-left md:text-right leading-relaxed font-medium">
+                <p className="text-[11px] md:text-[13px] text-mutedGrey max-w-[320px] text-left md:text-right leading-relaxed font-medium">
                     Premium aesthetic picnic setups and equipment rentals for your unforgettable outdoor dates and special occasions.
                 </p>
             </motion.div>
@@ -68,7 +68,7 @@ const Hero = () => {
                         <div className="flex justify-between items-start mb-4">
                             <div>
                                 <h4 className="text-sm font-serif italic shadow-black/50 drop-shadow-md mb-1.5">Premium Quality</h4>
-                                <div className="flex gap-0.5 text-accentYellow drop-shadow-md">
+                                <div className="flex gap-0.5 text-goldenGlow drop-shadow-md">
                                     {[...Array(5)].map((_, i) => (
                                         <svg key={i} className="w-3.5 h-3.5" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                                     ))}
@@ -85,11 +85,11 @@ const Hero = () => {
                         </p>
                         
                         <div className="flex items-center justify-between border-t border-white/30 pt-4">
-                            <span className="text-[10px] font-bold tracking-widest uppercase opacity-90 drop-shadow-md">Trusted by 200+ Couples</span>
+                            <span className="text-[10px] font-bold tracking-widest uppercase opacity-90 drop-shadow-md">Trusted by 1500+ happy customers</span>
                             <div className="flex -space-x-2">
                                 <div className="w-6 h-6 rounded-full border border-white bg-gray-200 overflow-hidden"><img src="/assets/images/4909310C-7E40-4B4B-9C58-479CDAD286EB - annisa nanda.jpeg" className="w-full h-full object-cover" alt="avatar"/></div>
                                 <div className="w-6 h-6 rounded-full border border-white bg-gray-200 overflow-hidden"><img src="/assets/images/50A6778C-4A33-4B1F-9F2A-B527FB46B680 - annisa nanda.jpeg" className="w-full h-full object-cover" alt="avatar"/></div>
-                                <div className="w-6 h-6 rounded-full border border-white bg-accentPink flex justify-center items-center text-[8px] font-bold text-white shadow-sm">+</div>
+                                <div className="w-6 h-6 rounded-full border border-white bg-dustyRose flex justify-center items-center text-[8px] font-bold text-white shadow-sm">+</div>
                             </div>
                         </div>
                     </div>

@@ -6,21 +6,19 @@ export default {
   theme: {
     extend: {
       colors: {
-        peach: '#F2A68D',
-        darkgrey: '#4A3B32',
-        offwhite: '#FFFBF7',
-        terracotta: '#E8A598',
-        primary: '#242A21',
-        bgLight: '#FFFFFF',
-        accentPink: '#F18C99',
-        accentYellow: '#E8A741',
-        accentGreen: '#5A6F4C',
-        textGray: '#545454',
+        sage: '#7FAF8E',
+        cream: '#F6F1EB',
+        dustyRose: '#D8A7A0',
+        warmPeach: '#E6B8A2',
+        forest: '#3F5F4A',
+        goldenGlow: '#EED9A0',
+        warmTaupe: '#B8A79A',
+        mutedGrey: '#8C8C8C',
       },
       fontFamily: {
         serif: ['"Playfair Display"', 'serif'],
-        sans: ['Inter', 'sans-serif'],
-        swash: ['"Pinyon Script"', 'cursive'],
+        sans: ['Poppins', 'sans-serif'],
+        swash: ['Allura', 'cursive'],
       }
     },
   },

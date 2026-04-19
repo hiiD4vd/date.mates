@@ -11,17 +11,17 @@ const HowItWorks = () => {
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-8"
         >
-            <h2 className="text-5xl md:text-6xl text-primary leading-tight">
+            <h2 className="text-5xl md:text-6xl text-forest leading-tight">
                 <span className="font-serif italic"><span className="drop-cap">P</span>icnic Moments</span> <br/>
                 <span className="font-serif italic">in the Open Air</span>
             </h2>
             <div className="max-w-sm text-left">
-                <p className="text-[13px] text-textGray mb-6 leading-relaxed">
+                <p className="text-[13px] text-mutedGrey mb-6 leading-relaxed">
                     date.mates is a space to slow down and enjoy the simple<br className="hidden md:block"/>
                     things — a beautifully set up picnic, sunlight on your skin,<br className="hidden md:block"/>
                     and gathering with loved ones on warm grass.
                 </p>
-                <a href="#packages" className="inline-flex items-center gap-2 px-6 py-2.5 bg-primary text-white rounded-full text-[10px] font-bold tracking-widest uppercase hover:opacity-90 transition">
+                <a href="#packages" className="inline-flex items-center gap-2 px-6 py-2.5 bg-sage text-white rounded-full text-[10px] font-bold tracking-widest uppercase hover:opacity-90 transition">
                     See Our Packages <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                 </a>
             </div>
@@ -48,7 +48,7 @@ const HowItWorks = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
-                className="w-full md:w-1/3 h-[300px] md:h-full bg-accentPink rounded-[2.5rem] p-10 flex flex-col justify-between text-white relative overflow-hidden transition hover:shadow-lg"
+                className="w-full md:w-1/3 h-[300px] md:h-full bg-dustyRose rounded-[2.5rem] p-10 flex flex-col justify-between text-white relative overflow-hidden transition hover:shadow-lg"
             >
                 <div className="absolute -right-10 -bottom-10 w-64 h-64 border-[40px] border-white/10 rounded-full pointer-events-none"></div>
                 <div className="text-[80px] font-serif leading-none mt-4 opacity-80 drop-shadow-sm font-semibold">“</div>
@@ -63,7 +63,7 @@ const HowItWorks = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                className="text-center font-serif text-3xl md:text-5xl text-primary italic mb-16"
+                className="text-center font-serif text-3xl md:text-5xl text-forest italic mb-16"
             >
                 <span className="drop-cap">H</span>ow It Works
             </motion.h3>
@@ -81,10 +81,10 @@ const HowItWorks = () => {
                     className="relative z-10 flex flex-col items-center text-center"
                 >
                     <div className="w-16 h-16 rounded-full bg-white border border-gray-200 flex items-center justify-center mb-6 shadow-sm">
-                        <span className="font-swash text-3xl text-primary mt-2">1</span>
+                        <span className="font-swash text-3xl text-forest mt-2">1</span>
                     </div>
-                    <h4 className="font-serif text-xl text-primary italic mb-3">Choose Your Aesthetic</h4>
-                    <p className="text-[12px] text-textGray leading-relaxed max-w-[250px]">
+                    <h4 className="font-serif text-xl text-forest italic mb-3">Choose Your Aesthetic</h4>
+                    <p className="text-[12px] text-mutedGrey leading-relaxed max-w-[250px]">
                         Select from our curated catalog packages or request a fully custom intimate setup.
                     </p>
                 </motion.div>
@@ -98,10 +98,10 @@ const HowItWorks = () => {
                     className="relative z-10 flex flex-col items-center text-center"
                 >
                     <div className="w-16 h-16 rounded-full bg-white border border-gray-200 flex items-center justify-center mb-6 shadow-sm">
-                        <span className="font-swash text-3xl text-primary mt-2">2</span>
+                        <span className="font-swash text-3xl text-forest mt-2">2</span>
                     </div>
-                    <h4 className="font-serif text-xl text-primary italic mb-3">Secure Your Date</h4>
-                    <p className="text-[12px] text-textGray leading-relaxed max-w-[250px]">
+                    <h4 className="font-serif text-xl text-forest italic mb-3">Secure Your Date</h4>
+                    <p className="text-[12px] text-mutedGrey leading-relaxed max-w-[250px]">
                         Collaborate with our team to lock in the perfect outdoor location and time.
                     </p>
                 </motion.div>
@@ -114,11 +114,11 @@ const HowItWorks = () => {
                     transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
                     className="relative z-10 flex flex-col items-center text-center"
                 >
-                    <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center mb-6 shadow-md text-white">
+                    <div className="w-16 h-16 rounded-full bg-sage flex items-center justify-center mb-6 shadow-md text-white">
                         <span className="font-swash text-3xl mt-2">3</span>
                     </div>
-                    <h4 className="font-serif text-xl text-primary italic mb-3">Arrive & Enjoy</h4>
-                    <p className="text-[12px] text-textGray leading-relaxed max-w-[250px]">
+                    <h4 className="font-serif text-xl text-forest italic mb-3">Arrive & Enjoy</h4>
+                    <p className="text-[12px] text-mutedGrey leading-relaxed max-w-[250px]">
                         Show up to your beautiful, ready-made stage. We handle the setup, styling, and cleanup.
                     </p>
                 </motion.div>

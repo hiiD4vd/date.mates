@@ -1,19 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Pinyon+Script&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --color-peach: #FECDD3;
-  --color-darkgrey: #333333;
-  --color-offwhite: #FAFAFA;
-  --color-primary: #242A21;
-  --color-bgLight: #FFFFFF;
-  --color-accentPink: #F18C99;
-  --color-accentYellow: #E8A741;
-  --color-accentGreen: #5A6F4C;
-  --color-textGray: #545454;
+  --color-sage: #7FAF8E;
+  --color-cream: #F6F1EB;
+  --color-dustyRose: #D8A7A0;
+  --color-warmPeach: #E6B8A2;
+  --color-forest: #3F5F4A;
+  --color-goldenGlow: #EED9A0;
+  --color-warmTaupe: #B8A79A;
+  --color-mutedGrey: #8C8C8C;
+  
+  --color-darkgrey: #333333; /* Keeping temporarily if needed */
+  
   --font-serif: "Playfair Display", serif;
-  --font-sans: "Inter", sans-serif;
-  --font-swash: "Pinyon Script", cursive;
+  --font-sans: "Poppins", sans-serif;
+  --font-swash: "Allura", cursive;
 }
 
 @layer base {

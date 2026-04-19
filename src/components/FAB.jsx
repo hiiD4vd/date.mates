@@ -10,7 +10,7 @@ const FAB = () => {
       className="fixed bottom-8 right-8 z-50 flex items-center gap-4 cursor-pointer group"
     >
       <div className="bg-white/90 backdrop-blur-md px-6 py-3 rounded-full shadow-[0_4px_20px_rgba(139,69,19,0.1)] opacity-0 translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 pointer-events-none sm:pointer-events-auto border border-orange-50">
-        <span className="text-[10px] tracking-[0.15em] font-bold text-darkgrey uppercase whitespace-nowrap">Need Help? Chat with us</span>
+        <span className="text-[10px] tracking-[0.15em] font-bold text-forest uppercase whitespace-nowrap">Need Help? Chat with us</span>
       </div>
       <div className="w-16 h-16 bg-[#25D366] rounded-full shadow-2xl flex items-center justify-center hover:scale-105 transition-transform duration-500 overflow-hidden relative">
         <div className="absolute inset-0 bg-white/20 scale-0 group-hover:scale-150 transition-transform duration-700 rounded-full"></div>

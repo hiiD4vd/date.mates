@@ -1,27 +1,28 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
-import Hero from './components/Hero';
-import HowItWorks from './components/HowItWorks';
-import OurStory from './components/OurStory';
-import ProductCatalog from './components/ProductCatalog';
-import Testimonials from './components/Testimonials';
 import LocationFooter from './components/LocationFooter';
 import FAB from './components/FAB';
-import Blog from './components/Blog';
+
+// Pages
+import Home from './pages/Home';
+import PackagesPage from './pages/PackagesPage';
 
 function App() {
   return (
-    <div className="min-h-screen bg-bgLight text-primary font-sans antialiased overflow-x-hidden">
-      <Header />
-      <Hero />
-      <HowItWorks />
-      <OurStory />
-      <ProductCatalog />
-      <Testimonials />
-      <Blog />
-      <LocationFooter />
-      <FAB />
-    </div>
+    <Router>
+      <div className="min-h-screen bg-bgLight text-primary font-sans antialiased overflow-x-hidden">
+        <Header />
+        
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/packages" element={<PackagesPage />} />
+        </Routes>
+
+        <LocationFooter />
+        <FAB />
+      </div>
+    </Router>
   );
 }
 

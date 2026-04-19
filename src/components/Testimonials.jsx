@@ -9,7 +9,7 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section className="max-w-[1400px] mx-auto px-8 py-16 text-primary">
+    <section className="max-w-[1400px] mx-auto px-8 py-16 text-forest">
         <motion.div 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -21,7 +21,7 @@ const Testimonials = () => {
                 <span className="italic"><span className="drop-cap">W</span>hat They Say</span><br/>
                 <span className="italic">Our Moments</span>
             </h2>
-            <a href="https://instagram.com" target="_blank" rel="noreferrer" className="flex items-center gap-2 px-6 py-2.5 bg-primary text-white rounded-full text-[10px] font-bold tracking-widest uppercase hover:bg-gray-800 transition mb-4">
+            <a href="https://instagram.com" target="_blank" rel="noreferrer" className="flex items-center gap-2 px-6 py-2.5 bg-sage text-white rounded-full text-[10px] font-bold tracking-widest uppercase hover:bg-gray-800 transition mb-4">
                 View Gallery <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
             </a>
         </motion.div>
@@ -39,7 +39,7 @@ const Testimonials = () => {
                 <motion.div 
                     animate={{ y: [0, -8, 0] }}
                     transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-                    className="absolute bottom-3 md:bottom-6 left-3 md:left-6 w-[calc(100%-1.5rem)] md:w-5/6 h-auto py-6 md:py-8 bg-accentGreen/95 backdrop-blur-sm flex flex-col justify-center px-8 md:px-10 text-white shadow-[0_15px_30px_rgba(0,0,0,0.15)] z-10"
+                    className="absolute bottom-3 md:bottom-6 left-3 md:left-6 w-[calc(100%-1.5rem)] md:w-5/6 h-auto py-6 md:py-8 bg-sage/95 backdrop-blur-sm flex flex-col justify-center px-8 md:px-10 text-white shadow-[0_15px_30px_rgba(0,0,0,0.15)] z-10"
                     style={{ borderRadius: "30px 80px 30px 15px" }}
                 >
                     <h3 className="font-serif text-[20px] md:text-[26px] italic mb-2 drop-shadow-sm leading-tight mt-2">"{testimonials[0].text}"</h3>
@@ -63,12 +63,12 @@ const Testimonials = () => {
                             <svg key={i} xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" className="mr-0.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
                         ))}
                     </div>
-                    <p className="text-[13px] text-textGray font-medium leading-relaxed italic mb-4">
+                    <p className="text-[13px] text-mutedGrey font-medium leading-relaxed italic mb-4">
                         "{testimonials[1].text}"
                     </p>
                     <div className="flex items-center gap-2">
                         <img src={testimonials[1].avatar} className="w-8 h-8 rounded-full object-cover" alt={testimonials[1].name} />
-                        <p className="text-[11px] text-primary font-bold tracking-wider uppercase">— {testimonials[1].name}</p>
+                        <p className="text-[11px] text-forest font-bold tracking-wider uppercase">— {testimonials[1].name}</p>
                     </div>
                 </motion.div>
                 
@@ -77,7 +77,7 @@ const Testimonials = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.4 }}
-                    className="col-span-1 md:col-span-1 row-span-1 md:row-span-2 bg-accentPink rounded-[2.5rem] p-8 text-white relative flex flex-col justify-center overflow-hidden shadow-sm h-auto min-h-[320px] md:h-full transition hover:shadow-lg"
+                    className="col-span-1 md:col-span-1 row-span-1 md:row-span-2 bg-dustyRose rounded-[2.5rem] p-8 text-white relative flex flex-col justify-center overflow-hidden shadow-sm h-auto min-h-[320px] md:h-full transition hover:shadow-lg"
                 >
                     <div className="absolute -top-10 -right-10 w-40 h-40 bg-white/20 rounded-full blur-2xl pointer-events-none"></div>
                     
@@ -111,7 +111,7 @@ const Testimonials = () => {
                     <motion.div 
                         animate={{ y: [0, -6, 0] }}
                         transition={{ repeat: Infinity, duration: 3.5, ease: "easeInOut", delay: 1 }}
-                        className="absolute bottom-4 left-4 w-[calc(100%-2rem)] h-auto py-4 bg-accentYellow/95 backdrop-blur-sm text-white px-2 text-center shadow-[0_15px_25px_rgba(0,0,0,0.15)] z-10"
+                        className="absolute bottom-4 left-4 w-[calc(100%-2rem)] h-auto py-4 bg-goldenGlow/95 backdrop-blur-sm text-white px-2 text-center shadow-[0_15px_25px_rgba(0,0,0,0.15)] z-10"
                         style={{ borderRadius: "40px 12px 40px 12px" }}
                     >
                         <span className="font-serif italic text-lg md:text-xl drop-shadow-sm leading-tight block">Aesthetic Detail</span>

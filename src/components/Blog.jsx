@@ -39,7 +39,7 @@ const Blog = () => {
             className="flex flex-col md:flex-row justify-between items-end mb-12 border-b border-gray-200 pb-8"
         >
             <div>
-                <h2 className="text-5xl md:text-6xl text-primary leading-tight">
+                <h2 className="text-5xl md:text-6xl text-forest leading-tight">
                     <span className="font-serif italic"><span className="drop-cap">D</span>ate Ideas</span> <br/>
                     <span className="font-serif italic">& Journal</span>
                 </h2>
@@ -66,20 +66,20 @@ const Blog = () => {
                             className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                         />
                         <div className="absolute top-4 left-4">
-                            <span className="px-4 py-1.5 bg-white/90 backdrop-blur-sm rounded-full text-[9px] font-bold tracking-widest uppercase text-primary">
+                            <span className="px-4 py-1.5 bg-white/90 backdrop-blur-sm rounded-full text-[9px] font-bold tracking-widest uppercase text-forest">
                                 {article.category}
                             </span>
                         </div>
                     </div>
                     <div>
                         <p className="text-[10px] font-bold tracking-widest uppercase text-gray-400 mb-3">{article.date}</p>
-                        <h3 className="font-serif text-2xl text-primary leading-tight mb-3 group-hover:text-accentYellow transition-colors duration-300">
+                        <h3 className="font-serif text-2xl text-forest leading-tight mb-3 group-hover:text-goldenGlow transition-colors duration-300">
                             {article.title}
                         </h3>
-                        <p className="text-[12px] text-textGray leading-relaxed mb-4">
+                        <p className="text-[12px] text-mutedGrey leading-relaxed mb-4">
                             {article.excerpt}
                         </p>
-                        <span className="text-[11px] font-bold tracking-widest uppercase text-primary border-b border-primary pb-1 group-hover:border-accentYellow group-hover:text-accentYellow transition-all duration-300">
+                        <span className="text-[11px] font-bold tracking-widest uppercase text-forest border-b border-forest pb-1 group-hover:border-goldenGlow group-hover:text-goldenGlow transition-all duration-300">
                             Read Article
                         </span>
                     </div>

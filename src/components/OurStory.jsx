@@ -20,8 +20,8 @@ const OurStory = () => {
                 className="w-full h-full object-cover rounded-[3rem] shadow-sm transition duration-700 group-hover:scale-[1.02]" 
             />
             {/* Soft decorative element */}
-            <div className="absolute -z-10 -bottom-6 -left-6 w-full h-full border border-orange-200 rounded-[3rem]"></div>
-            <div className="absolute top-8 -right-4 w-24 h-24 bg-accentPink rounded-full flex items-center justify-center rotate-12 shadow-md hover:rotate-0 transition duration-500">
+            <div className="absolute -z-10 -bottom-6 -left-6 w-full h-full border border-goldenGlow/50 rounded-[3rem]"></div>
+            <div className="absolute top-8 -right-4 w-24 h-24 bg-dustyRose rounded-full flex items-center justify-center rotate-12 shadow-md hover:rotate-0 transition duration-500">
                 <span className="font-swash text-white text-2xl drop-shadow-sm">Since '20</span>
             </div>
         </motion.div>
@@ -34,12 +34,12 @@ const OurStory = () => {
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
             className="w-full lg:w-7/12"
         >
-            <h2 className="text-4xl md:text-5xl text-primary leading-tight mb-8">
+            <h2 className="text-4xl md:text-5xl text-forest leading-tight mb-8">
                 <span className="font-serif italic"><span className="drop-cap">C</span>reate your dream dates</span> <br/>
                 <span className="font-serif italic">come true!</span>
             </h2>
             
-            <div className="space-y-6 text-[13.5px] text-textGray leading-relaxed max-w-xl">
+            <div className="space-y-6 text-[13.5px] text-mutedGrey leading-relaxed max-w-xl">
                 <p>
                     Back to August 2020, date.mates come from a simple idea; to fulfil recreational needs during COVID-19 pandemic when outdoor activities and picnic became popular on social media. We started the business by providing picnic set rent and decorations rent with the purpose to simplify our customer picnic preparation and give them a memorable and unique “picnic-date” experience.
                 </p>
@@ -49,16 +49,19 @@ const OurStory = () => {
             </div>
 
             <div className="mt-12 pt-8 border-t border-gray-200">
-                <h4 className="font-serif italic text-2xl text-primary mb-6">Why date.mates?</h4>
+                <h4 className="font-serif italic text-2xl text-forest mb-6">Why choose date.mates?</h4>
                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <li className="flex items-center gap-3 text-[12px] font-medium text-textGray bg-white px-5 py-3 rounded-full shadow-sm border border-gray-100">
-                        <span className="w-3 h-3 rounded-full bg-accentYellow"></span> We offer you unique date experiences
+                    <li className="flex items-center gap-3 text-[12px] font-medium text-mutedGrey bg-white px-5 py-3 rounded-full shadow-sm border border-gray-100">
+                        <span className="w-3 h-3 rounded-full bg-goldenGlow"></span> Aesthetic & curated styling
                     </li>
-                    <li className="flex items-center gap-3 text-[12px] font-medium text-textGray bg-white px-5 py-3 rounded-full shadow-sm border border-gray-100">
-                        <span className="w-3 h-3 rounded-full bg-accentPink"></span> We help you to create your moments
+                    <li className="flex items-center gap-3 text-[12px] font-medium text-mutedGrey bg-white px-5 py-3 rounded-full shadow-sm border border-gray-100">
+                        <span className="w-3 h-3 rounded-full bg-dustyRose"></span> Hassle-free & setup ready
                     </li>
-                    <li className="flex items-center gap-3 text-[12px] font-medium text-textGray bg-white px-5 py-3 rounded-full shadow-sm border border-gray-100">
-                        <span className="w-3 h-3 rounded-full bg-accentGreen"></span> We are your date mates
+                    <li className="flex items-center gap-3 text-[12px] font-medium text-mutedGrey bg-white px-5 py-3 rounded-full shadow-sm border border-gray-100">
+                        <span className="w-3 h-3 rounded-full bg-sage"></span> Customizable based on needs
+                    </li>
+                    <li className="flex items-center gap-3 text-[12px] font-medium text-mutedGrey bg-white px-5 py-3 rounded-full shadow-sm border border-gray-100">
+                        <span className="w-3 h-3 rounded-full bg-warmPeach"></span> Trusted by 1500+ happy customers
                     </li>
                 </ul>
             </div>
