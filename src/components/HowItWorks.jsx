@@ -83,9 +83,9 @@ const HowItWorks = () => {
                     <div className="w-16 h-16 rounded-full bg-white border border-gray-200 flex items-center justify-center mb-6 shadow-sm">
                         <span className="font-swash text-3xl text-forest mt-2">1</span>
                     </div>
-                    <h4 className="font-serif text-xl text-forest italic mb-3">Choose Your Aesthetic</h4>
+                    <h4 className="font-serif text-xl text-forest italic mb-3">Curate Your Moment</h4>
                     <p className="text-[12px] text-mutedGrey leading-relaxed max-w-[250px]">
-                        Select from our curated catalog packages or request a fully custom intimate setup.
+                        Select your favorite picnic setup, then add board games and extra items to your cart.
                     </p>
                 </motion.div>
                 
@@ -100,9 +100,9 @@ const HowItWorks = () => {
                     <div className="w-16 h-16 rounded-full bg-white border border-gray-200 flex items-center justify-center mb-6 shadow-sm">
                         <span className="font-swash text-3xl text-forest mt-2">2</span>
                     </div>
-                    <h4 className="font-serif text-xl text-forest italic mb-3">Secure Your Date</h4>
+                    <h4 className="font-serif text-xl text-forest italic mb-3">Secure Your Booking</h4>
                     <p className="text-[12px] text-mutedGrey leading-relaxed max-w-[250px]">
-                        Collaborate with our team to lock in the perfect outdoor location and time.
+                        Open your cart, choose your date and duration, and checkout easily via WhatsApp.
                     </p>
                 </motion.div>
                 

@@ -3,8 +3,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import BookingModal from './BookingModal';
 import { products, categories, badgeColors } from '../data/products';
+import { useCart } from '../context/CartContext';
 
 const ProductCatalog = () => {
+  const { addToCart } = useCart();
   const [activeCategory, setActiveCategory] = useState('See All');
   const [selectedProduct, setSelectedProduct] = useState(null);
 
@@ -95,7 +97,14 @@ const ProductCatalog = () => {
 
                 <div className={`absolute bottom-4 left-4 right-4 md:bottom-8 md:right-8 md:left-auto ${badgeColors[index % 3]} text-white px-3 py-2.5 md:px-5 md:py-4 rounded-[1rem] md:rounded-[1.5rem] text-[9px] md:text-[11px] font-medium leading-relaxed max-w-full md:max-w-[220px] text-left z-10 shadow-lg transition-transform duration-300 group-hover:-translate-y-1 md:group-hover:-translate-y-2 backdrop-blur-sm bg-opacity-90`}>
                    <div className="font-bold mb-0.5 md:mb-1 opacity-95 uppercase tracking-wider text-[10px] md:text-[12px]">{product.price}</div>
-                   <div className="opacity-90 line-clamp-2 md:line-clamp-none">{product.desc}</div>
+                   <div className="opacity-90 line-clamp-2 md:line-clamp-none mb-2">{product.desc}</div>
+                   <button 
+                     onClick={(e) => { e.stopPropagation(); addToCart(product); }}
+                     className="flex items-center justify-center gap-1.5 w-full py-1.5 md:py-2 bg-white/20 hover:bg-white/40 rounded-lg text-[9px] md:text-[10px] font-bold uppercase tracking-wider transition-colors backdrop-blur-md"
+                   >
+                     <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+                     Add to Cart
+                   </button>
                 </div>
             </motion.div>
           ))}
