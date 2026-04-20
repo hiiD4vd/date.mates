@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const HowItWorks = () => {
   return (
-    <section className="max-w-[1400px] mx-auto px-8 py-12" id="about">
+    <section className="max-w-[1400px] mx-auto px-8 py-12" id="howitworks">
         <motion.div 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}

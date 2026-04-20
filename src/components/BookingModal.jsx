@@ -8,7 +8,7 @@ const ADD_ONS = [
   { id: 4, name: 'Premium Cutlery Set', price: 35000 },
 ];
 
-const RENTAL_DURATIONS = ['8 Hours', '12 Hours'];
+const RENTAL_DURATIONS = ['12 Hours', '24 Hours'];
 
 const Carousel = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -52,6 +52,8 @@ const Carousel = ({ images }) => {
 
 const BookingModal = ({ isOpen, onClose, product }) => {
   const [step, setStep] = useState(1); // 1 = Details, 2 = Form
+  const [name, setName] = useState('');
+  const [address, setAddress] = useState('');
   const [date, setDate] = useState('');
   const [duration, setDuration] = useState('');
   const [selectedAddOns, setSelectedAddOns] = useState([]);
@@ -62,6 +64,8 @@ const BookingModal = ({ isOpen, onClose, product }) => {
        setBasePrice(product.priceValue || 70000); 
        setStep(1);
     } else {
+        setName('');
+        setAddress('');
         setDate('');
         setDuration('');
         setSelectedAddOns([]);
@@ -90,8 +94,8 @@ const BookingModal = ({ isOpen, onClose, product }) => {
   };
 
   const handleWhatsAppCheckout = () => {
-    if (!date || !duration) {
-        alert('Please select date and rental duration.');
+    if (!name || !address || !date || !duration) {
+        alert('Please fill in all required fields (Name, Address, Date, and Duration).');
         return;
     }
     const addOnsText = selectedAddOns.length > 0 
@@ -100,6 +104,8 @@ const BookingModal = ({ isOpen, onClose, product }) => {
       
     const message = `Hello date.mates, I want to book:
 Package: ${product.title.replace(/<br\/>/g, ' ')}
+Name: ${name}
+Address: ${address}
 Date: ${date}
 Duration: ${duration}
 Add-ons: ${addOnsText}
@@ -229,6 +235,30 @@ Is this available?`;
 
                   <div className="p-8 md:p-12 overflow-y-auto flex-1 min-h-0">
                     <div className="space-y-6">
+                      {/* Personal Info */}
+                      <div className="grid grid-cols-1 gap-6">
+                         <div>
+                            <label className="block text-xs font-bold text-gray-500 uppercase tracking-widest mb-2">Full Name</label>
+                             <input 
+                              type="text" 
+                              value={name}
+                              onChange={(e) => setName(e.target.value)}
+                              placeholder="e.g. Jane Doe"
+                              className="w-full border border-gray-200 bg-[#FDFBF7] rounded-xl px-4 py-3 text-forest focus:outline-none focus:border-dustyRose focus:ring-1 focus:ring-dustyRose transition-colors text-sm"
+                            />
+                         </div>
+                         <div>
+                            <label className="block text-xs font-bold text-gray-500 uppercase tracking-widest mb-2">Delivery/Setup Address</label>
+                             <textarea 
+                              value={address}
+                              onChange={(e) => setAddress(e.target.value)}
+                              placeholder="e.g. Jl. Sudirman No. 123, Jakarta"
+                              rows={2}
+                              className="w-full border border-gray-200 bg-[#FDFBF7] rounded-xl px-4 py-3 text-forest focus:outline-none focus:border-dustyRose focus:ring-1 focus:ring-dustyRose transition-colors text-sm resize-none"
+                            />
+                         </div>
+                      </div>
+
                       {/* Date & Time */}
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                          <div>

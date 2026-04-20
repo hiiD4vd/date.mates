@@ -9,7 +9,7 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section className="max-w-[1400px] mx-auto px-8 py-16 text-forest">
+    <section className="max-w-[1400px] mx-auto px-8 py-16 text-forest" id="gallery">
         <motion.div 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
