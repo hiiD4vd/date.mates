@@ -91,7 +91,7 @@ const PackagesPage = () => {
                        <div className="opacity-90 line-clamp-2 md:line-clamp-none mb-2">{product.desc}</div>
                        <button 
                          onClick={(e) => { e.stopPropagation(); addToCart(product); }}
-                         className="flex items-center justify-center gap-1.5 w-full py-1.5 md:py-2 bg-white/20 hover:bg-white/40 rounded-lg text-[9px] md:text-[10px] font-bold uppercase tracking-wider transition-colors backdrop-blur-md"
+                         className="flex items-center justify-center gap-1.5 w-full py-1.5 md:py-2 bg-white hover:bg-gray-100 text-forest rounded-lg text-[9px] md:text-[10px] font-bold uppercase tracking-wider transition-colors shadow-sm"
                        >
                          <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
                          Add to Cart
