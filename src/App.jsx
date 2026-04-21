@@ -9,8 +9,22 @@ import FAB from './components/FAB';
 import Home from './pages/Home';
 import PackagesPage from './pages/PackagesPage';
 import CartDrawer from './components/CartDrawer';
+import BannerPreview from './pages/BannerPreview';
 
 function App() {
+  // Cek apakah user sedang membuka halaman khusus untuk screenshot banner
+  const isBannerRoute = window.location.pathname === '/og-banner';
+
+  if (isBannerRoute) {
+    return (
+      <Router>
+        <Routes>
+          <Route path="/og-banner" element={<BannerPreview />} />
+        </Routes>
+      </Router>
+    );
+  }
+
   return (
     <CartProvider>
       <Router>

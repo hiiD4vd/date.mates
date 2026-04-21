@@ -23,7 +23,7 @@ const Header = () => {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-        className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-cream/90 backdrop-blur-lg border-b border-gray-100 py-3 shadow-sm' : 'bg-cream py-4'}`}
+        className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-cream/90 backdrop-blur-lg border-b border-gray-100 py-3 shadow-sm' : 'bg-transparent py-4 md:py-6'}`}
       >
         <nav className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
           {/* Left: Logo */}
