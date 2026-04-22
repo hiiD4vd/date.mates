@@ -36,12 +36,12 @@ const Blog = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="flex flex-col md:flex-row justify-between items-end mb-12 border-b border-gray-200 pb-8"
+            className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 border-b border-gray-200 pb-8"
         >
             <div>
-                <h2 className="text-5xl md:text-6xl text-forest leading-tight">
-                    <span className="font-serif italic"><span className="drop-cap">D</span>ate Ideas</span> <br/>
-                    <span className="font-serif italic">& Journal</span>
+                <h2 className="text-[2.75rem] md:text-6xl text-forest leading-[1.1] md:leading-tight">
+                    <span className="font-serif italic"><span className="drop-cap">D</span>ate Ideas</span> <br className="hidden md:block"/>
+                    <span className="font-serif italic"> & Journal</span>
                 </h2>
             </div>
             <a href="#" className="hidden md:inline-flex items-center gap-2 px-6 py-2.5 border border-gray-300 rounded-full text-[10px] font-bold tracking-widest uppercase hover:bg-gray-50 transition">

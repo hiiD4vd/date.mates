@@ -11,7 +11,7 @@ const HowItWorks = () => {
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-8"
         >
-            <h2 className="text-5xl md:text-6xl text-forest leading-tight">
+            <h2 className="text-[2.75rem] md:text-6xl text-forest leading-[1.1] md:leading-tight">
                 <span className="font-serif italic"><span className="drop-cap">P</span>icnic Moments</span> <br/>
                 <span className="font-serif italic">in the Open Air</span>
             </h2>

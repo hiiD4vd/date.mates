@@ -20,10 +20,19 @@
 
 @layer base {
   :root {
-    /* Konfigurasi untuk huruf judul (Drop Cap) */
-    --drop-cap-size: 1.8em;       /* Ukuran font huruf awal */
-    --drop-cap-spacing: 1.5rem; /* pr-2.5 (Jarak ke huruf sebelahnya) */
-    --drop-cap-top: 0.45rem;      /* top-2 (Posisi geser atas-bawah) */
+    /* Konfigurasi untuk huruf judul (Drop Cap) mobile */
+    --drop-cap-size: 1.6em;       
+    --drop-cap-spacing: 0.5rem; 
+    --drop-cap-top: 0.1rem;      
+  }
+
+  @media (min-width: 768px) {
+    :root {
+      /* Konfigurasi untuk huruf judul (Drop Cap) desktop */
+      --drop-cap-size: 1.8em;       
+      --drop-cap-spacing: 1.5rem; 
+      --drop-cap-top: 0.45rem;      
+    }
   }
 
   body {

@@ -24,9 +24,9 @@ const Hero = () => {
                 transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
                 className="flex flex-col items-start md:items-end"
             >
-                <h1 className="text-left text-5xl md:text-6xl lg:text-[5.5rem] leading-[0.8] md:leading-[0.75] text-forest mb-4">
+                <h1 className="text-left text-[2.75rem] md:text-6xl lg:text-[5.5rem] leading-[1] md:leading-[0.75] text-forest mb-4">
                     <span className="font-serif italic relative z-10"><span className="drop-cap">Y</span>our Moment,</span><br/>
-                    <span className="font-serif italic inline-block ml-10 md:ml-12">Made Effortless</span>
+                    <span className="font-serif italic inline-block ml-4 md:ml-12">Made Effortless</span>
                 </h1>
                 <p className="text-[11px] md:text-[13px] text-mutedGrey max-w-[320px] text-left md:text-right leading-relaxed font-medium">
                     Premium aesthetic picnic setups and equipment rentals for your unforgettable outdoor dates and special occasions.

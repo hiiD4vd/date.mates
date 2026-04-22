@@ -17,9 +17,9 @@ const Testimonials = () => {
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 gap-4"
         >
-            <h2 className="font-serif text-[3.5rem] leading-tight mb-2">
-                <span className="italic"><span className="drop-cap">W</span>hat They Say</span><br/>
-                <span className="italic">Our Moments</span>
+            <h2 className="font-serif text-[2.75rem] md:text-[3.5rem] leading-[1.1] md:leading-tight mb-2">
+                <span className="italic"><span className="drop-cap">W</span>hat They Say</span><br className="hidden md:block"/>
+                <span className="italic"> Our Moments</span>
             </h2>
             <a href="https://instagram.com" target="_blank" rel="noreferrer" className="flex items-center gap-2 px-6 py-2.5 bg-sage text-white rounded-full text-[10px] font-bold tracking-widest uppercase hover:bg-gray-800 transition mb-4">
                 View Gallery <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
