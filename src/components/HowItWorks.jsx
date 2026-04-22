@@ -12,7 +12,7 @@ const HowItWorks = () => {
             className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-8"
         >
             <h2 className="text-[2.75rem] md:text-6xl text-forest leading-[1.1] md:leading-tight">
-                <span className="font-serif italic"><span className="drop-cap">P</span>icnic Moments</span> <br/>
+                <span className="font-serif italic"><span className="drop-cap" style={{ marginRight: '0.4rem' }}>P</span>icnic Moments</span> <br/>
                 <span className="font-serif italic">in the Open Air</span>
             </h2>
             <div className="max-w-sm text-left">
