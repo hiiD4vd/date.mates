@@ -41,10 +41,7 @@ const OurStory = () => {
             
             <div className="space-y-6 text-[13.5px] text-mutedGrey leading-relaxed max-w-xl">
                 <p>
-                    Back to August 2020, date.mates come from a simple idea; to fulfil recreational needs during COVID-19 pandemic when outdoor activities and picnic became popular on social media. We started the business by providing picnic set rent and decorations rent with the purpose to simplify our customer picnic preparation and give them a memorable and unique “picnic-date” experience.
-                </p>
-                <p>
-                    Throughout these 5 years, we have received huge enthusiasm and took our role as ‘the mate’ that accompany our customers, not only on a daily picnic, but also on some of their special occasions such as birthday, anniversary, pre-wedding, bridal shower, etc. We have been using our social media platforms to share these moments from our customers and became the source for picnic-date inspiration. We keep developing our services and now we have various kind of picnic set both outdoor and indoor available to be rent daily for our customers.
+                    date.mates started in 2020 from a simple idea — to make outdoor moments more special and effortless. From picnic setups to event styling, we help create memorable experiences for your special days ✨
                 </p>
             </div>
 

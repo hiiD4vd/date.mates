@@ -29,4 +29,4 @@ export const products = [
 ];
 
 export const categories = ['See All', 'Highlight Packages', 'Decoration Set', 'Our Picnic Set', 'Board Games', 'Additional Items'];
-export const badgeColors = ['bg-goldenGlow', 'bg-sage', 'bg-dustyRose'];
+export const badgeColors = ['bg-forest/90', 'bg-forest/90', 'bg-forest/90'];

@@ -32,7 +32,8 @@ const Header = () => {
               <img 
                 src="/assets/logo/datemates logo transparent.png" 
                 alt="date.mates logo" 
-                className="h-14 md:h-16 object-contain drop-shadow-sm" 
+                className="h-14 md:h-16 object-contain drop-shadow-sm"
+                style={{ filter: 'brightness(0) saturate(100%) invert(35%) sepia(15%) saturate(1637%) hue-rotate(96deg) brightness(98%) contrast(86%)' }}
               />
             </Link>
           </div>
