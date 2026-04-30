@@ -105,7 +105,7 @@ const PackagesPage = () => {
                         {/* Mobile button */}
                         <button 
                           onClick={(e) => { e.stopPropagation(); addToCart(product); }}
-                          className="mt-3 w-full py-2 border border-gray-200 text-gray-600 text-[10px] font-bold uppercase tracking-widest flex md:hidden items-center justify-center gap-2 rounded-lg hover:bg-gray-50 transition-colors"
+                          className="mt-3 w-full py-2 bg-forest text-white text-[10px] font-bold uppercase tracking-widest flex md:hidden items-center justify-center gap-2 rounded-lg shadow-sm hover:bg-opacity-90 transition-colors"
                         >
                           <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
                           {product.priceValue === 0 ? 'Request' : 'Add to Cart'}
