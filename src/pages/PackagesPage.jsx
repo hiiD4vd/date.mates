@@ -60,42 +60,56 @@ const PackagesPage = () => {
               </motion.div>
 
               {/* Product Grid */}
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-8">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mb-12">
                 {categoryProducts.map((product, index) => (
                   <motion.div 
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, scale: 0.95, y: 20 }}
+                    whileInView={{ opacity: 1, scale: 1, y: 0 }}
                     viewport={{ once: true, margin: "-50px" }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    transition={{ duration: 0.5, delay: index * 0.05 }}
                     key={product.id} 
-                    className="aspect-[4/5] md:aspect-square bg-gray-200 rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden relative group cursor-pointer shadow-sm hover:shadow-xl transition-all duration-300" 
+                    className="flex flex-col text-left group cursor-pointer" 
                     onClick={() => setSelectedProduct(product)}
                   >
-                    <img 
-                        src={product.images[0]} 
-                        alt={product.title.replace('<br/>', ' ')} 
-                        loading="lazy"
-                        className="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-105" 
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent group-hover:via-black/20 transition duration-300"></div>
-                    
-                    <div className="absolute top-4 left-4 right-4 md:top-8 md:left-8 md:right-8 flex justify-between items-start z-10 pointer-events-none">
-                        <div 
-                          className="text-white font-serif text-[18px] md:text-[28px] italic leading-tight text-left drop-shadow-md"
-                          dangerouslySetInnerHTML={{ __html: product.title }}
+                    {/* Image Container */}
+                    <div className="relative w-full aspect-square bg-gray-100 mb-4 overflow-hidden rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                        <img 
+                            src={product.images[0]} 
+                            alt={product.title.replace('<br/>', ' ')} 
+                            loading="lazy"
+                            className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
                         />
+                        {/* Add to Cart Overlay Button (appears on hover on desktop) */}
+                        <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:flex items-center justify-center">
+                            <button 
+                              onClick={(e) => { e.stopPropagation(); addToCart(product); }}
+                              className="px-6 py-2 bg-white text-forest text-xs font-bold uppercase tracking-widest shadow-lg transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 hover:bg-forest hover:text-white rounded-full flex items-center gap-2"
+                            >
+                              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                              {product.priceValue === 0 ? 'Request Quote' : 'Add to Cart'}
+                            </button>
+                        </div>
                     </div>
 
-                    <div className={`absolute bottom-4 left-4 right-4 md:bottom-8 md:right-8 md:left-auto ${badgeColors[index % 3]} text-white px-3 py-2.5 md:px-5 md:py-4 rounded-[1rem] md:rounded-[1.5rem] text-[9px] md:text-[11px] font-medium leading-relaxed max-w-full md:max-w-[220px] text-left z-10 shadow-lg transition-transform duration-300 group-hover:-translate-y-1 md:group-hover:-translate-y-2 backdrop-blur-sm bg-opacity-90`}>
-                       <div className="font-bold mb-0.5 md:mb-1 opacity-95 uppercase tracking-wider text-[10px] md:text-[12px]">{product.price}</div>
-                       <div className="opacity-90 line-clamp-2 md:line-clamp-none mb-2">{product.desc}</div>
-                       <button 
-                         onClick={(e) => { e.stopPropagation(); addToCart(product); }}
-                         className="flex items-center justify-center gap-1.5 w-full py-1.5 md:py-2 bg-white hover:bg-gray-100 text-forest rounded-lg text-[9px] md:text-[10px] font-bold uppercase tracking-wider transition-colors shadow-sm"
-                       >
-                         <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
-                         Add to Cart
-                       </button>
+                    {/* Product Info */}
+                    <div className="flex flex-col flex-grow px-1">
+                        <span className="text-[10px] text-gray-400 uppercase tracking-wider mb-1 font-semibold">{product.category}</span>
+                        <h3 
+                          className="text-[14px] md:text-[16px] text-gray-800 font-medium leading-snug mb-2"
+                          dangerouslySetInnerHTML={{ __html: product.title }}
+                        />
+                        <div className="text-[13px] md:text-[15px] font-bold text-gray-900 mt-auto">
+                            {product.priceValue === 0 ? <span className="text-forest">Harga by Request</span> : product.price}
+                        </div>
+                        
+                        {/* Mobile button */}
+                        <button 
+                          onClick={(e) => { e.stopPropagation(); addToCart(product); }}
+                          className="mt-3 w-full py-2 border border-gray-200 text-gray-600 text-[10px] font-bold uppercase tracking-widest flex md:hidden items-center justify-center gap-2 rounded-lg hover:bg-gray-50 transition-colors"
+                        >
+                          <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                          {product.priceValue === 0 ? 'Request' : 'Add to Cart'}
+                        </button>
                     </div>
                   </motion.div>
                 ))}

@@ -15,7 +15,7 @@ const OurStory = () => {
             className="w-full lg:w-5/12 relative group h-[500px]"
         >
             <img 
-                src="/assets/images/IMG_1029_jpg.jpg" 
+                src="/assets/images/batujajar.jpg" 
                 alt="date.mates early days" 
                 className="w-full h-full object-cover rounded-[3rem] shadow-sm transition duration-700 group-hover:scale-[1.02]" 
             />
@@ -35,8 +35,7 @@ const OurStory = () => {
             className="w-full lg:w-7/12"
         >
             <h2 className="text-4xl md:text-5xl text-forest leading-tight mb-8">
-                <span className="font-serif italic"><span className="drop-cap">C</span>reate your dream dates</span> <br/>
-                <span className="font-serif italic">come true!</span>
+                <span className="font-serif italic"><span className="drop-cap">C</span>reate your dream dates come true!</span>
             </h2>
             
             <div className="space-y-6 text-[13.5px] text-mutedGrey leading-relaxed max-w-xl">

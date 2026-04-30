@@ -35,7 +35,7 @@ const HowItWorks = () => {
                 transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
                 className="w-full md:w-2/3 h-[300px] md:h-full bg-gray-200 rounded-[2.5rem] overflow-hidden relative group"
             >
-                <img src="/assets/images/IMG_1053_jpg.jpg" alt="Picnic setup flatlay" className="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-105" />
+                <img src="/assets/images/situ patenggang 1.jpg" alt="Picnic setup flatlay" className="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-105" />
                 <div className="absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/20 transition duration-500">
                     <span className="text-white font-bold tracking-widest text-2xl drop-shadow-lg flex items-center gap-2">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="drop-shadow-md"><circle cx="12" cy="12" r="10" fill="white" fillOpacity="0.9"/></svg>

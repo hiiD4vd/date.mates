@@ -40,7 +40,7 @@ const Hero = () => {
             transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
             className="relative w-full h-[400px] md:h-[550px] bg-gray-200 rounded-[2.5rem] overflow-hidden group"
         >
-            <img src="/assets/images/4909310C-7E40-4B4B-9C58-479CDAD286EB - annisa nanda.jpeg" alt="Aesthetic picnic setup" className="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-105" />
+            <img src="/assets/images/hero section.JPG" alt="Aesthetic picnic setup" className="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-105" />
             
             <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition duration-500"></div>
 
