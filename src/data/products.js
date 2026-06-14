@@ -1,18 +1,18 @@
 export const products = [
   // Highlight Packages
-  { id: 21, category: 'Highlight Packages', isFeatured: true, title: 'Birthday Picnic Setup', desc: 'Fun & aesthetic celebration with friends', price: 'Start from 150k/pax', priceValue: 150000, images: ['https://datemates.co/wp-content/uploads/2022/09/rental-birthday-decor-300x300.jpg', '/assets/images/product katalog/complete set1.jpg'] },
-  { id: 22, category: 'Highlight Packages', isFeatured: true, title: 'Anniversary Picnic Setup', desc: 'Intimate and romantic setup for couples', price: 'Start from 350k', priceValue: 350000, images: ['https://datemates.co/wp-content/uploads/2022/09/premium-set-oray-tapa-300x300.jpg', '/assets/images/product katalog/premium set.jpg'] },
-  { id: 23, category: 'Highlight Packages', isFeatured: true, title: 'Prewedding Picnic Setup', desc: 'Camera-ready aesthetic styling for content', price: 'Start from 500k', priceValue: 500000, images: ['https://datemates.co/wp-content/uploads/2022/09/parisian-set-datemates-2-300x300.jpg', '/assets/images/product katalog/parisian set1.jpg', '/assets/images/product katalog/parisian set2.JPG'] },
+  { id: 21, category: 'Highlight Packages', isFeatured: true, title: 'Birthday Picnic Setup', desc: 'Fun & aesthetic celebration with friends', price: 'Start from 150k/pax', priceValue: 150000, images: ['/assets/images/product katalog/complete set1.jpg'] },
+  { id: 22, category: 'Highlight Packages', isFeatured: true, title: 'Anniversary Picnic Setup', desc: 'Intimate and romantic setup for couples', price: 'Start from 350k', priceValue: 350000, images: ['/assets/images/product katalog/premium set.jpg'] },
+  { id: 23, category: 'Highlight Packages', isFeatured: true, title: 'Prewedding Picnic Setup', desc: 'Camera-ready aesthetic styling for content', price: 'Start from 500k', priceValue: 500000, images: ['/assets/images/product katalog/parisian set1.jpg', '/assets/images/product katalog/parisian set2.JPG'] },
 
   // Decoration Set (Expanded to 8 to match datemates.co carousel)
-  { id: 24, category: 'Decoration Set', isFeatured: false, title: 'Custom Wedding Setup', desc: 'Elegant outdoor wedding decoration', price: 'Harga by Request', priceValue: 0, images: ['https://datemates.co/wp-content/uploads/2025/10/decor-request-datemates.jpg'] },
-  { id: 26, category: 'Decoration Set', isFeatured: false, title: 'Garden Party Decor', desc: 'Perfect for large group gatherings', price: 'Harga by Request', priceValue: 0, images: ['https://datemates.co/wp-content/uploads/2025/10/decor-request-datemates-2.jpg'] },
-  { id: 27, category: 'Decoration Set', isFeatured: false, title: 'Corporate Gathering', desc: 'Professional yet aesthetic setup', price: 'Harga by Request', priceValue: 0, images: ['https://datemates.co/wp-content/uploads/2025/10/decor-request-datemates-3.jpg'] },
-  { id: 28, category: 'Decoration Set', isFeatured: false, title: 'Engagement Decor', desc: 'Intimate engagement celebration', price: 'Harga by Request', priceValue: 0, images: ['https://datemates.co/wp-content/uploads/2025/10/decor-request-datemates-4.jpg'] },
-  { id: 29, category: 'Decoration Set', isFeatured: false, title: 'Bridal Shower Setup', desc: 'Beautiful setup for the bride-to-be', price: 'Harga by Request', priceValue: 0, images: ['https://datemates.co/wp-content/uploads/2025/10/decor-request-datemates-5.jpg'] },
-  { id: 30, category: 'Decoration Set', isFeatured: false, title: 'Kids Birthday Party', desc: 'Fun and colorful decoration', price: 'Harga by Request', priceValue: 0, images: ['https://datemates.co/wp-content/uploads/2025/10/decor-request-datemates-6.jpg'] },
-  { id: 31, category: 'Decoration Set', isFeatured: false, title: 'Private Event Styling', desc: 'Exclusive styling for your event', price: 'Harga by Request', priceValue: 0, images: ['https://datemates.co/wp-content/uploads/2025/10/decor-request-datemates-7.jpg'] },
-  { id: 32, category: 'Decoration Set', isFeatured: false, title: 'Premium Indoor Decor', desc: 'Transform your indoor space', price: 'Harga by Request', priceValue: 0, images: ['https://datemates.co/wp-content/uploads/2025/10/decor-request-datemates-8.jpg'] },
+  { id: 24, category: 'Decoration Set', isFeatured: false, title: 'Custom Wedding Setup', desc: 'Elegant outdoor wedding decoration', price: 'Harga by Request', priceValue: 0, images: ['https://placehold.co/600x600/e8f2e9/2c5e3b?text=Image+Coming+Soon'] },
+  { id: 26, category: 'Decoration Set', isFeatured: false, title: 'Garden Party Decor', desc: 'Perfect for large group gatherings', price: 'Harga by Request', priceValue: 0, images: ['https://placehold.co/600x600/e8f2e9/2c5e3b?text=Image+Coming+Soon'] },
+  { id: 27, category: 'Decoration Set', isFeatured: false, title: 'Corporate Gathering', desc: 'Professional yet aesthetic setup', price: 'Harga by Request', priceValue: 0, images: ['https://placehold.co/600x600/e8f2e9/2c5e3b?text=Image+Coming+Soon'] },
+  { id: 28, category: 'Decoration Set', isFeatured: false, title: 'Engagement Decor', desc: 'Intimate engagement celebration', price: 'Harga by Request', priceValue: 0, images: ['https://placehold.co/600x600/e8f2e9/2c5e3b?text=Image+Coming+Soon'] },
+  { id: 29, category: 'Decoration Set', isFeatured: false, title: 'Bridal Shower Setup', desc: 'Beautiful setup for the bride-to-be', price: 'Harga by Request', priceValue: 0, images: ['https://placehold.co/600x600/e8f2e9/2c5e3b?text=Image+Coming+Soon'] },
+  { id: 30, category: 'Decoration Set', isFeatured: false, title: 'Kids Birthday Party', desc: 'Fun and colorful decoration', price: 'Harga by Request', priceValue: 0, images: ['https://placehold.co/600x600/e8f2e9/2c5e3b?text=Image+Coming+Soon'] },
+  { id: 31, category: 'Decoration Set', isFeatured: false, title: 'Private Event Styling', desc: 'Exclusive styling for your event', price: 'Harga by Request', priceValue: 0, images: ['https://placehold.co/600x600/e8f2e9/2c5e3b?text=Image+Coming+Soon'] },
+  { id: 32, category: 'Decoration Set', isFeatured: false, title: 'Premium Indoor Decor', desc: 'Transform your indoor space', price: 'Harga by Request', priceValue: 0, images: ['https://placehold.co/600x600/e8f2e9/2c5e3b?text=Image+Coming+Soon'] },
 
   // Our Set (Expanded with all Drive Images so they are used)
   { id: 1, category: 'Our Set', isFeatured: true, title: 'Basic Set', desc: 'Minimalist setup for an easy picnic', price: 'Rp 70.000', priceValue: 70000, images: ['/assets/images/product katalog/basic set1.jpg', '/assets/images/product katalog/basic set2.jpg', '/assets/images/product katalog/basic set3.JPG'] },
@@ -27,11 +27,11 @@ export const products = [
   { id: 34, category: 'Our Set', isFeatured: false, title: 'Premium Picnic Set', desc: 'Top tier picnic experience', price: 'Rp 250.000', priceValue: 250000, images: ['/assets/images/product katalog/premium set.jpg'] },
 
   // Board Games (Using datemates.co exact URLs since Drive doesn't have them)
-  { id: 9, category: 'Board Games', isFeatured: false, title: 'Ular Tangga', desc: 'Board Games', price: 'Rp 10.000', priceValue: 10000, images: ['https://datemates.co/wp-content/uploads/2022/09/ular-tangga-300x300.jpg'] },
-  { id: 10, category: 'Board Games', isFeatured: false, title: 'Ludo', desc: 'Board Games', price: 'Rp 10.000', priceValue: 10000, images: ['https://datemates.co/wp-content/uploads/2022/09/ludo-300x300.jpg'] },
-  { id: 11, category: 'Board Games', isFeatured: false, title: 'Monopoli & Catur', desc: 'Board Games', price: 'Rp 15.000', priceValue: 15000, images: ['https://datemates.co/wp-content/uploads/2022/09/monopoli-300x300.jpg'] },
-  { id: 12, category: 'Board Games', isFeatured: false, title: '5 Second Rule', desc: 'Board Games', price: 'Rp 25.000', priceValue: 25000, images: ['https://datemates.co/wp-content/uploads/2022/09/5-second-rule-300x300.jpg'] },
-  { id: 13, category: 'Board Games', isFeatured: false, title: 'Uno', desc: 'Board Games', price: 'Rp 10.000', priceValue: 10000, images: ['https://datemates.co/wp-content/uploads/2022/09/Uno-300x300.png'] },
+  { id: 9, category: 'Board Games', isFeatured: false, title: 'Ular Tangga', desc: 'Board Games', price: 'Rp 10.000', priceValue: 10000, images: ['https://placehold.co/600x600/e8f2e9/2c5e3b?text=Ular+Tangga'] },
+  { id: 10, category: 'Board Games', isFeatured: false, title: 'Ludo', desc: 'Board Games', price: 'Rp 10.000', priceValue: 10000, images: ['https://placehold.co/600x600/e8f2e9/2c5e3b?text=Ludo'] },
+  { id: 11, category: 'Board Games', isFeatured: false, title: 'Monopoli & Catur', desc: 'Board Games', price: 'Rp 15.000', priceValue: 15000, images: ['https://placehold.co/600x600/e8f2e9/2c5e3b?text=Monopoli+%26+Catur'] },
+  { id: 12, category: 'Board Games', isFeatured: false, title: '5 Second Rule', desc: 'Board Games', price: 'Rp 25.000', priceValue: 25000, images: ['https://placehold.co/600x600/e8f2e9/2c5e3b?text=5+Second+Rule'] },
+  { id: 13, category: 'Board Games', isFeatured: false, title: 'Uno', desc: 'Board Games', price: 'Rp 10.000', priceValue: 10000, images: ['https://placehold.co/600x600/e8f2e9/2c5e3b?text=Uno'] },
   
   // Additional Items (Using Drive Images to maximize usage)
   { id: 14, category: 'Additional Items', isFeatured: false, title: 'Blackboard', desc: 'Write your custom messages', price: 'Rp 15.000', priceValue: 15000, images: ['/assets/images/product katalog/IMG_0394.JPG'] },

@@ -8,6 +8,7 @@ import FAB from './components/FAB';
 // Pages
 import Home from './pages/Home';
 import PackagesPage from './pages/PackagesPage';
+import BlogPost from './pages/BlogPost';
 import CartDrawer from './components/CartDrawer';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/packages" element={<PackagesPage />} />
+            <Route path="/blog/:slug" element={<BlogPost />} />
           </Routes>
 
           <LocationFooter />

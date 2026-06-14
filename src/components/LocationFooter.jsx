@@ -25,7 +25,7 @@ const LocationFooter = () => {
             <div className="absolute bottom-6 md:bottom-auto md:top-6 left-6 right-6 md:right-auto bg-white/95 backdrop-blur-md px-6 py-5 rounded-2xl shadow-lg max-w-sm border border-gray-100 pointer-events-none">
                 <h5 className="font-serif italic text-2xl text-forest mb-1">Our Base</h5>
                 <p className="text-[10px] font-bold tracking-widest text-goldenGlow uppercase mb-3">Visit Us</p>
-                <p className="text-[13px] text-mutedGrey leading-relaxed font-medium">Jl. Setiabudi No. 123<br/>Bandung, West Java, Indonesia</p>
+                <p className="text-[13px] text-mutedGrey leading-relaxed font-medium">Komplek Sarijadi Blk. 1 No.34C<br/>Sarijadi, Kec. Sukasari, Kota Bandung, Jawa Barat 40151</p>
                 <div className="mt-4 pt-4 border-t border-gray-100 flex items-center justify-between">
                     <span className="text-[11px] font-bold tracking-widest text-forest uppercase">Mon-Sun</span>
                     <span className="text-[11px] font-bold tracking-widest text-gray-400 uppercase">09:00 - 18:00</span>
