@@ -6,12 +6,11 @@ import { useCart } from '../context/CartContext';
 const RENTAL_DURATIONS = ['12 Hours', '24 Hours'];
 
 const CartDrawer = () => {
-  const { isCartOpen, setIsCartOpen, cartItems, removeFromCart, updateQuantity, cartTotal } = useCart();
+  const { isCartOpen, setIsCartOpen, cartItems, removeFromCart, updateQuantity, cartTotal, duration, setDuration } = useCart();
   
   const [name, setName] = useState('');
   const [address, setAddress] = useState('');
   const [date, setDate] = useState('');
-  const [duration, setDuration] = useState('');
 
   const formatRupiah = (number) => {
     return new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', maximumFractionDigits: 0 }).format(number);
@@ -25,7 +24,7 @@ const CartDrawer = () => {
       return;
     }
 
-    const itemsText = cartItems.map(item => `- ${item.quantity}x ${item.title.replace(/<br\/>/g, ' ')} (${formatRupiah(item.priceValue * item.quantity)})`).join('\n');
+    const itemsText = cartItems.map(item => `- ${item.quantity}x ${item.title.replace(/<br\/>/g, ' ')} (${formatRupiah(((duration === '24 Hours' && item.price24h) ? item.price24h : item.priceValue) * item.quantity)})`).join('\n');
     
     const message = `Hello date.mates, I would like to book:
     
@@ -43,7 +42,7 @@ Duration: ${duration}
 Is this available?`;
 
     const encodedMessage = encodeURIComponent(message);
-    window.open(`https://wa.me/6281221427380?text=${encodedMessage}`, '_blank');
+    window.open(`https://wa.me/6285934745486?text=${encodedMessage}`, '_blank');
   };
 
   return (
@@ -102,7 +101,7 @@ Is this available?`;
                         <img src={item.images[0]} alt="product" className="w-20 h-20 object-cover rounded-xl bg-cream" />
                         <div className="flex-1">
                           <h4 className="text-sm font-bold text-forest leading-tight mb-1" dangerouslySetInnerHTML={{ __html: item.title }} />
-                          <div className="text-dustyRose font-medium text-xs mb-2">{formatRupiah(item.priceValue)}</div>
+                          <div className="text-dustyRose font-medium text-xs mb-2">{formatRupiah((duration === '24 Hours' && item.price24h) ? item.price24h : item.priceValue)}</div>
                           <div className="flex items-center gap-3">
                             <div className="flex items-center border border-gray-200 rounded-lg overflow-hidden">
                               <button onClick={() => updateQuantity(item.id, item.quantity - 1)} className="px-2 py-0.5 bg-gray-50 hover:bg-gray-100 text-gray-600 transition-colors">-</button>

@@ -9,9 +9,16 @@ export const useCart = () => {
 export const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
+  const [duration, setDuration] = useState(''); // Added duration state
 
-  // Calculate total whenever cart changes
-  const cartTotal = cartItems.reduce((total, item) => total + (item.priceValue * item.quantity), 0);
+  // Calculate total whenever cart changes or duration changes
+  const cartTotal = cartItems.reduce((total, item) => {
+    let price = item.priceValue;
+    if (duration === '24 Hours' && item.price24h) {
+      price = item.price24h;
+    }
+    return total + (price * item.quantity);
+  }, 0);
   const cartCount = cartItems.reduce((count, item) => count + item.quantity, 0);
 
   const addToCart = (product, quantity = 1) => {
@@ -59,7 +66,9 @@ export const CartProvider = ({ children }) => {
     cartTotal,
     cartCount,
     isCartOpen,
+    duration,
     setIsCartOpen,
+    setDuration,
     addToCart,
     removeFromCart,
     updateQuantity,
