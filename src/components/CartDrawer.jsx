@@ -43,7 +43,7 @@ Duration: ${duration}
 Is this available?`;
 
     const encodedMessage = encodeURIComponent(message);
-    window.open(`https://wa.me/6285163565305?text=${encodedMessage}`, '_blank');
+    window.open(`https://wa.me/6281221427380?text=${encodedMessage}`, '_blank');
   };
 
   return (

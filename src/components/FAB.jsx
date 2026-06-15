@@ -6,7 +6,7 @@ const FAB = () => {
   const { cartCount, setIsCartOpen } = useCart();
 
   const handleWhatsApp = () => {
-    window.open('https://wa.me/6285163565305', '_blank');
+    window.open('https://wa.me/6281221427380', '_blank');
   };
 
   return (
