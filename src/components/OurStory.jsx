@@ -15,7 +15,7 @@ const OurStory = () => {
             className="w-full lg:w-5/12 relative group h-[500px]"
         >
             <img 
-                src="/assets/images/batujajar.jpg" 
+                src="/assets/images/Create your dream dates come true!.jpg" 
                 alt="date.mates early days" 
                 className="w-full h-full object-cover rounded-[3rem] shadow-sm transition duration-700 group-hover:scale-[1.02]" 
             />
