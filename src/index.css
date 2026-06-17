@@ -59,4 +59,41 @@
     position: relative;
     top: var(--drop-cap-top);
   }
+
+  /* Custom Swiper Styles for Product Cards */
+  .group\/swiper .swiper-button-next,
+  .group\/swiper .swiper-button-prev {
+    color: white;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .group\/swiper .swiper-button-next:after,
+  .group\/swiper .swiper-button-prev:after {
+    font-size: 12px;
+    font-weight: bold;
+  }
+  .group\/swiper:hover .swiper-button-next,
+  .group\/swiper:hover .swiper-button-prev {
+    opacity: 1;
+  }
+  .group\/swiper .swiper-button-next:hover,
+  .group\/swiper .swiper-button-prev:hover {
+    background: rgba(0, 0, 0, 0.6);
+  }
+  .group\/swiper .swiper-pagination-bullet {
+    background: white;
+    opacity: 0.6;
+    width: 6px;
+    height: 6px;
+  }
+  .group\/swiper .swiper-pagination-bullet-active {
+    background: var(--color-forest);
+    opacity: 1;
+    width: 8px;
+    height: 8px;
+  }
 }
