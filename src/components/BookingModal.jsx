@@ -1,43 +1,41 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useCart } from '../context/CartContext';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, Navigation } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 const Carousel = ({ images }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const next = () => setCurrentIndex((prev) => (prev + 1) % images.length);
-  const prev = () => setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
-
   if (!images || images.length === 0) return <div className="w-full h-full bg-gray-200"></div>;
 
+  if (images.length === 1) {
+    return (
+      <div className="w-full h-full bg-gray-100">
+        <img src={images[0]} alt="Product" className="w-full h-full object-cover" />
+      </div>
+    );
+  }
+
   return (
-    <div className="relative w-full h-full group overflow-hidden bg-gray-100">
-       <AnimatePresence mode="wait">
-          <motion.img 
-            key={currentIndex}
-            src={images[currentIndex]}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.5 }}
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-       </AnimatePresence>
-       {images.length > 1 && (
-         <>
-          <button onClick={(e) => { e.stopPropagation(); prev(); }} className="absolute left-4 top-1/2 -translate-y-1/2 w-8 h-8 md:w-10 md:h-10 bg-white/70 backdrop-blur rounded-full flex items-center justify-center opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity hover:bg-white text-forest shadow-sm">
-            <svg className="w-4 h-4 md:w-5 md:h-5 mr-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7"></path></svg>
-          </button>
-          <button onClick={(e) => { e.stopPropagation(); next(); }} className="absolute right-4 top-1/2 -translate-y-1/2 w-8 h-8 md:w-10 md:h-10 bg-white/70 backdrop-blur rounded-full flex items-center justify-center opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity hover:bg-white text-forest shadow-sm">
-            <svg className="w-4 h-4 md:w-5 md:h-5 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path></svg>
-          </button>
-          <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
-             {images.map((_, idx) => (
-                <div key={idx} className={`w-2 h-2 rounded-full transition-colors ${idx === currentIndex ? 'bg-white' : 'bg-white/50 border border-black/10'}`} />
-             ))}
-          </div>
-         </>
-       )}
+    <div className="w-full h-full bg-gray-100 relative group/swiper">
+      <Swiper
+        modules={[Pagination, Navigation]}
+        pagination={{ clickable: true }}
+        navigation
+        className="w-full h-full"
+      >
+        {images.map((img, idx) => (
+          <SwiperSlide key={idx} className="w-full h-full">
+            <img 
+              src={img} 
+              alt={`Slide ${idx + 1}`}
+              className="w-full h-full object-cover"
+            />
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
   );
 };

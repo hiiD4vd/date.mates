@@ -3,11 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { products, categories, badgeColors } from '../data/products';
 import BookingModal from '../components/BookingModal';
 import { useCart } from '../context/CartContext';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Navigation } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
+
 
 const PackagesPage = () => {
   const { addToCart } = useCart();
@@ -87,32 +83,12 @@ const PackagesPage = () => {
                         }
                       }}
                     >
-                        {product.images.length > 1 ? (
-                            <Swiper
-                                modules={[Pagination, Navigation]}
-                                pagination={{ clickable: true }}
-                                navigation
-                                className="w-full h-full group/swiper"
-                            >
-                                {product.images.map((img, i) => (
-                                    <SwiperSlide key={i} className="w-full h-full">
-                                        <img 
-                                            src={img} 
-                                            alt={`${product.title.replace('<br/>', ' ')} ${i + 1}`} 
-                                            loading="lazy"
-                                            className="w-full h-full object-cover transition-transform duration-700 hover:scale-105" 
-                                        />
-                                    </SwiperSlide>
-                                ))}
-                            </Swiper>
-                        ) : (
-                            <img 
-                                src={product.images[0]} 
-                                alt={product.title.replace('<br/>', ' ')} 
-                                loading="lazy"
-                                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
-                            />
-                        )}
+                    <img 
+                        src={product.images[0]} 
+                        alt={product.title.replace('<br/>', ' ')} 
+                        loading="lazy"
+                        className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                    />
                         {/* Add to Cart Overlay Button (appears on hover on desktop) */}
                         <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:flex items-center justify-center pointer-events-none z-10">
                             <button 
