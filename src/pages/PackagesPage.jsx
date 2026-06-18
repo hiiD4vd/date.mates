@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { products, categories, badgeColors } from '../data/products';
+import { categories, badgeColors } from '../data/products';
 import BookingModal from '../components/BookingModal';
 import { useCart } from '../context/CartContext';
 
@@ -11,6 +11,31 @@ const PackagesPage = () => {
 
   // Filter out "See All" from categories since we only want to map real categories
   const realCategories = categories.filter(cat => cat !== 'See All');
+
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const res = await fetch('/api/products');
+        const data = await res.json();
+        // Ensure data is an array to prevent crashes
+        if (Array.isArray(data)) {
+          setProducts(data);
+        } else {
+          console.error('API did not return an array:', data);
+          setProducts([]);
+        }
+      } catch (err) {
+        console.error('Failed to fetch products:', err);
+        setProducts([]);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchProducts();
+  }, []);
 
   useEffect(() => {
     // Scroll to top when page loads
@@ -41,7 +66,14 @@ const PackagesPage = () => {
           </motion.p>
         </div>
 
-        {/* Categories Sections */}
+        {/* Loading State */}
+        {loading ? (
+          <div className="flex justify-center items-center py-32">
+            <div className="w-10 h-10 border-4 border-forest border-t-transparent rounded-full animate-spin"></div>
+          </div>
+        ) : (
+          <>
+          {/* Categories Sections */}
         {realCategories.map((category, catIndex) => {
           const categoryProducts = products.filter(p => p.category === category);
           if (categoryProducts.length === 0) return null;
@@ -127,6 +159,8 @@ const PackagesPage = () => {
             </section>
           );
         })}
+        </>
+        )}
 
       </div>
 

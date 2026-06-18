@@ -34,6 +34,11 @@ const apiFallback = () => ({
             const handler = await import(handlerPath + '?update=' + Date.now());
             await handler.default(req, res);
             return;
+          } else if (parsedUrl.pathname === '/api/products') {
+            const handlerPath = url.pathToFileURL(process.cwd() + '/api/products.js').href;
+            const handler = await import(handlerPath + '?update=' + Date.now());
+            await handler.default(req, res);
+            return;
           }
         } catch (e) {
           console.error(e);

@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import BookingModal from './BookingModal';
-import { products, categories, badgeColors } from '../data/products';
+import { categories, badgeColors } from '../data/products';
 import { useCart } from '../context/CartContext';
 
 
@@ -10,6 +10,31 @@ const ProductCatalog = () => {
   const { addToCart } = useCart();
   const [activeCategory, setActiveCategory] = useState('See All');
   const [selectedProduct, setSelectedProduct] = useState(null);
+
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const res = await fetch('/api/products');
+        const data = await res.json();
+        // Ensure data is an array to prevent crashes
+        if (Array.isArray(data)) {
+          setProducts(data);
+        } else {
+          console.error('API did not return an array:', data);
+          setProducts([]);
+        }
+      } catch (err) {
+        console.error('Failed to fetch products:', err);
+        setProducts([]);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchProducts();
+  }, []);
 
   // Filter products based on active category
   const filteredProducts = activeCategory === 'See All' 
@@ -64,7 +89,12 @@ const ProductCatalog = () => {
         ))}
       </motion.div>
 
-      {/* Product Grid - E-Commerce Style */}
+      {/* Loading State */}
+      {loading ? (
+        <div className="flex justify-center items-center py-20">
+          <div className="w-8 h-8 border-4 border-forest border-t-transparent rounded-full animate-spin"></div>
+        </div>
+      ) : (
       <motion.div 
         layout
         className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mb-12"
@@ -135,6 +165,7 @@ const ProductCatalog = () => {
           ))}
         </AnimatePresence>
       </motion.div>
+      )}
       
       {/* Navigation to Packages Page */}
       <motion.div layout className="flex justify-center mt-4">
