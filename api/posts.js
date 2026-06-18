@@ -24,7 +24,7 @@ export default async function handler(req, res) {
     const posts = response.results.map((page) => {
       return {
         id: page.id,
-        title: page.properties.Title?.title[0]?.plain_text || 'Untitled',
+        title: page.properties['Title ']?.title[0]?.plain_text || 'Untitled',
         slug: page.properties.slug?.rich_text[0]?.plain_text || page.id,
         category: page.properties.Category?.select?.name || 'Uncategorized',
         excerpt: page.properties.Excerpt?.rich_text[0]?.plain_text || '',

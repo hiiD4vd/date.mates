@@ -13,7 +13,8 @@ async function test() {
     console.log("Success! Found", response.results.length, "posts.");
     if(response.results.length > 0) {
         const page = response.results[0];
-        console.log("Sample post Title:", page.properties.Title?.title[0]?.plain_text);
+        console.log("Property keys:", Object.keys(page.properties));
+        console.log("Sample post Title:", page.properties.Name?.title[0]?.plain_text || page.properties.Title?.title[0]?.plain_text);
         console.log("Sample post slug:", page.properties.slug?.rich_text[0]?.plain_text);
     }
   } catch (e) {

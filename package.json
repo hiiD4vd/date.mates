@@ -10,8 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@notionhq/client": "^5.22.0",
+    "@notionhq/client": "^2.2.15",
     "@tailwindcss/typography": "^0.5.20",
+    "dotenv": "^17.4.2",
     "framer-motion": "^12.38.0",
     "heic-convert": "^2.1.0",
     "lucide-react": "^1.8.0",

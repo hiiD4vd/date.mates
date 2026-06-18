@@ -33,7 +33,7 @@ export default async function handler(req, res) {
     // 2. Extract metadata
     const metadata = {
       id: page.id,
-      title: page.properties.Title?.title[0]?.plain_text || 'Untitled',
+      title: page.properties['Title ']?.title[0]?.plain_text || 'Untitled',
       slug: page.properties.slug?.rich_text[0]?.plain_text || page.id,
       category: page.properties.Category?.select?.name || 'Uncategorized',
       date: page.properties.Date?.date?.start || '',
